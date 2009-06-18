@@ -283,7 +283,7 @@ void UnikeyInstance::Unikey_update_preedit_string(const WideString s, const bool
     AttributeList list;
     Attribute att;
 
-    att = Attribute(0, s.length(), SCIM_ATTR_DECORATE, SCIM_ATTR_DECORATE_REVERSE);
+    att = Attribute(0, s.length(), SCIM_ATTR_DECORATE, SCIM_ATTR_DECORATE_UNDERLINE);
     list.push_back(att);
 
     if (m_ukopt.spellCheckEnabled==1 && UnikeyLastWordIsNonVn())

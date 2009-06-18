@@ -1,0 +1,20 @@
+--- orginal/stdafx.h	2009-04-14 00:16:33.000000000 +0700
++++ stdafx.h	1970-01-01 07:00:00.000000000 +0700
+@@ -1,17 +0,0 @@
+-// stdafx.h : include file for standard system include files,
+-// or project specific include files that are used frequently, but
+-// are changed infrequently
+-//
+-
+-#pragma once
+-
+-#if defined(_WIN32)
+-
+-#define WIN32_LEAN_AND_MEAN		// Exclude rarely-used stuff from Windows headers
+-
+-// TODO: reference additional headers your program requires here
+-#include <windows.h>
+-#include <tchar.h>
+-#include <stdio.h>
+-
+-#endif

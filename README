@@ -1,0 +1,15 @@
+Scim-Unikey IME
+---------------
+Copyright (C) 2008-2009 Ubuntu-VN <http://www.ubuntu-vn.org>
+Author: Le Quoc Tuan <mr.lequoctuan@gmail.com>
+Home: http://scim-unikey.googlecode.com
+License: GNU LESSER GENERAL PUBLIC LICENSE v2.1
+---------------------------------------------
+scim-unikey is a scim input method engine.
+It use ukengine for progress key event.
+(a mod version of ukengine)
+
+For support: goto http://forum.ubuntu-vn.org/viewforum.php?f=85
+
+Please read INSTALL for how to install
+

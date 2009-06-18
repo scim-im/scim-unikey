@@ -1,0 +1,30 @@
+Scim-Unikey IME
+---------------
+Copyright (C) 2008-2009 Ubuntu-VN <http://www.ubuntu-vn.org>
+Author: Le Quoc Tuan <mr.lequoctuan@gmail.com>
+Home: http://scim-unikey.googlecode.com
+License: GNU LESSER GENERAL PUBLIC LICENSE v2.1
+---------------------------------------------
+Install from source:
+--------------------
+Basic step:
+       ./configure --prefix=/usr
+       make
+       make install
+----------
+On Ubuntu:
+    1. Install some package for build:
+       sudo apt-get install build-essential libscim-dev
+
+    2. Open a Terminal, change directory to parent of scim-unikey-version.tar.bz2 and type
+       tar xvjf scim-unikey-version.tar.bz2
+       ./configure --prefix=/usr
+       make
+       sudo make install
+
+       (for smaller size use: sudo make install-strip)
+
+    3*. For uninstall, type:
+       sudo make uninstall
+
+If you have difficult with compile or using, goto http://forum.ubuntu-vn.org/viewforum.php?f=85

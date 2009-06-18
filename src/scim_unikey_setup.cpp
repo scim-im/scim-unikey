@@ -591,7 +591,7 @@ static void on_key_edited (GtkCellRendererText *celltext, const gchar *string_pa
     while (b)
     {
         gtk_tree_model_get(model, &iter, COL_KEY, &curkey, -1);
-        if (!strcmp(curkey, new_text))
+        if (!strcasecmp(curkey, new_text))
             return;
 
         b = gtk_tree_model_iter_next(model, &iter);

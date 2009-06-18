@@ -280,7 +280,19 @@ void UnikeyInstance::Unikey_send_backspace(int nBackspace)
 
 void UnikeyInstance::Unikey_update_preedit_string(const WideString s, const bool visible)
 {
-    update_preedit_string(s);
+    AttributeList list;
+    Attribute att;
+
+    att = Attribute(0, s.length(), SCIM_ATTR_DECORATE, SCIM_ATTR_DECORATE_REVERSE);
+    list.push_back(att);
+
+    if (m_ukopt.spellCheckEnabled==1 && UnikeyLastWordIsNonVn())
+    {
+        att = Attribute(0, s.length(), SCIM_ATTR_FOREGROUND, 0xff0000);
+        list.push_back(att);
+    }
+
+    update_preedit_string(s, list);
     update_preedit_caret(s.length());
 
     if (visible == true)

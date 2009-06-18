@@ -1,6 +1,5 @@
 /**
    Scim-Unikey Input Method
-   Version: 0.2.0
 
    Copyright (C) 2008-2009 Ubuntu-VN <http://www.ubuntu-vn.org>
    Author: Le Quoc Tuan <mr.lequoctuan@gmail.com>
@@ -228,6 +227,8 @@ UnikeyInstance::UnikeyInstance(UnikeyFactory *factory, const String &encoding, i
     {
         UnikeyLoadMacroTable(getMacroFile());
     }
+
+    reset();
 }
 
 UnikeyInstance::~UnikeyInstance()
@@ -236,8 +237,6 @@ UnikeyInstance::~UnikeyInstance()
 
 void UnikeyInstance::focus_in()
 {
-    reset();
-
     register_properties(CreatePropertyList());
 
     UnikeySetInputMethod(Unikey_IM[m_im]);
@@ -296,11 +295,13 @@ void UnikeyInstance::Unikey_update_preedit_string(const WideString s, const bool
     AttributeList list;
     Attribute att;
 
+    // underline preedit string
     att = Attribute(0, s.length(), SCIM_ATTR_DECORATE, SCIM_ATTR_DECORATE_UNDERLINE);
     list.push_back(att);
 
     if (m_ukopt.spellCheckEnabled==1 && UnikeyLastWordIsNonVn())
     {
+        // red preedit string
         att = Attribute(0, s.length(), SCIM_ATTR_FOREGROUND, 0xff0000);
         list.push_back(att);
     }
@@ -322,7 +323,8 @@ bool UnikeyInstance::process_key_event(const KeyEvent& key)
 {
     bool tmp;
 
-    for (int i; i<m_preeditskey.size(); i++)
+    for (int i = 0; i<m_preeditskey.size(); i++)
+    {
         if (key==m_preeditskey.at(i))
         {
             reset();
@@ -330,10 +332,10 @@ bool UnikeyInstance::process_key_event(const KeyEvent& key)
             register_properties(CreatePropertyList());
             return true;
         }
+    }
 
     tmp = m_preedit?Unikey_process_key_event_preedit(key)
         :Unikey_process_key_event_direct(key);
-
 
     if ((key.code >= SCIM_KEY_space && key.code <= SCIM_KEY_asciitilde)
         || (key.code >= SCIM_KEY_KP_Multiply && key.code <= SCIM_KEY_KP_9))
@@ -352,7 +354,9 @@ bool UnikeyInstance::process_key_event(const KeyEvent& key)
 bool UnikeyInstance::Unikey_process_key_event_direct(const KeyEvent& key)
 {
     if (key.is_key_release())
+    {
         return false;
+    }
 
     if (key.is_control_down() || key.mask & SCIM_KEY_AltMask)
     {
@@ -361,7 +365,9 @@ bool UnikeyInstance::Unikey_process_key_event_direct(const KeyEvent& key)
     }
 
     if (key.code >= SCIM_KEY_Shift_L && key.code <= SCIM_KEY_Hyper_R)
+    {
         return false;
+    }
 
     if (key.code == SCIM_KEY_BackSpace)
     {

@@ -1,6 +1,5 @@
 /**
    Scim-Unikey Input Method
-   Version: 0.2.0
 
    Copyright (C) 2008-2009 Ubuntu-VN <http://www.ubuntu-vn.org>
    Author: Le Quoc Tuan <mr.lequoctuan@gmail.com>

@@ -142,7 +142,7 @@ static GtkWidget* create_setup_window()
         GtkWidget *fr = gtk_frame_new(_("Unikey option"));
         gtk_box_pack_start(GTK_BOX(vbox0), fr, false, false, 0);
 
-        GtkWidget *vbox = gtk_vbox_new(false, 5);
+        GtkWidget *vbox = gtk_vbox_new(false, 0);
         gtk_container_add(GTK_CONTAINER(fr), vbox);
         gtk_container_set_border_width(GTK_CONTAINER(fr), 5);
 
@@ -184,7 +184,7 @@ static GtkWidget* create_setup_window()
         gtk_container_set_border_width(GTK_CONTAINER(prefr), 5);
         gtk_box_pack_start(GTK_BOX(vbox0), prefr, false, false, 0);
 
-        vbox = gtk_vbox_new(false, 5);
+        vbox = gtk_vbox_new(false, 0);
         gtk_container_add(GTK_CONTAINER(prefr), vbox);
 
 // create preedit switch key
@@ -230,7 +230,7 @@ static GtkWidget* create_setup_window()
         gtk_box_pack_start(GTK_BOX(vbox), fr2, false, false, 0);
         gtk_container_set_border_width(GTK_CONTAINER(fr2), 5);
 
-        vbox = gtk_vbox_new(false, 5);
+        vbox = gtk_vbox_new(false, 0);
         gtk_container_add(GTK_CONTAINER(fr), vbox);
 
 // create macroenabled checkbox
@@ -250,7 +250,7 @@ static GtkWidget* create_setup_window()
 
 
 // right frame 2
-        vbox = gtk_vbox_new(false, 5);
+        vbox = gtk_vbox_new(false, 0);
         gtk_container_add(GTK_CONTAINER(fr2), vbox);
 
 // create process w at word begin checkbox

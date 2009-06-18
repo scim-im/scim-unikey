@@ -1,5 +1,5 @@
 --- orginal/inputproc.cpp	2009-04-14 00:16:33.000000000 +0700
-+++ inputproc.cpp	2009-06-18 14:39:10.000000000 +0700
++++ inputproc.cpp	2009-06-18 15:04:22.000000000 +0700
 @@ -20,7 +20,7 @@
   * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
   * Boston, MA 02111-1307, USA.

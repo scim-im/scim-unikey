@@ -264,6 +264,9 @@ int UkInputProcessor::setIM(UkInputMethod im)
         case UkTelex:
             useBuiltIn(TelexMethodMapping);
             break;
+        case UkSimpleTelex:
+            useBuiltIn(SimpleTelexMethodMapping);
+            break;
         case UkVni:
             useBuiltIn(VniMethodMapping);
             break;

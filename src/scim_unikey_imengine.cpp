@@ -47,13 +47,19 @@ static unsigned char WordAutoCommit[] =
 	'P', 'Q', 'R', 'S', 'T', 'V', 'X', 'Z'
 };
 
-const String          Unikey_IMNames[]    = {"Telex", "Vni", "Viqr"};
-const UkInputMethod   Unikey_IM[]         = {UkTelex, UkVni, UkViqr};
-const unsigned int    NUM_INPUTMETHOD     = sizeof(Unikey_IMNames)/sizeof(Unikey_IMNames[0]);
+const String          Unikey_IMNames[]    = {"Telex", "Vni", "STelex"};
+const UkInputMethod   Unikey_IM[]         = {UkTelex, UkVni, UkSimpleTelex};
+const unsigned int    NUM_INPUTMETHOD     = sizeof(Unikey_IM)/sizeof(Unikey_IM[0]);
 
-const String          Unikey_OCNames[]    = {"Unicode",           "TCVN3",            "VNI Win",              "VIQR"};
-const unsigned int    Unikey_OC[]         = {CONV_CHARSET_XUTF8,  CONV_CHARSET_TCVN3, CONV_CHARSET_VNIWIN,    CONV_CHARSET_VIQR};
-const unsigned int    NUM_OUTPUTCHARSET   = sizeof(Unikey_OCNames)/sizeof(Unikey_OCNames[0]);
+const String          Unikey_OCNames[]    = {"Unicode",
+                                             "TCVN3",
+                                             "VNI Win",
+                                             "VIQR"};
+const unsigned int    Unikey_OC[]         = {CONV_CHARSET_XUTF8,
+                                             CONV_CHARSET_TCVN3,
+                                             CONV_CHARSET_VNIWIN,
+                                             CONV_CHARSET_VIQR};
+const unsigned int    NUM_OUTPUTCHARSET   = sizeof(Unikey_OC)/sizeof(Unikey_OC[0]);
 
 ConfigPointer   __config;
 
@@ -779,9 +785,9 @@ void UnikeyInstance::trigger_property(const String &property)
 	if (!property.compare(0, strlen("/Unikey/InputMethod/"), "/Unikey/InputMethod/"))
 	{
 		for (i=0; i<NUM_INPUTMETHOD; i++)
-			if (!property.compare(property.length()-Unikey_IMNames[i].length(),
-								 Unikey_IMNames[i].length(),
-								 Unikey_IMNames[i]))
+			if (!property.compare(strlen("/Unikey/InputMethod/"),
+                                  property.length() - strlen("/Unikey/InputMethod/"),
+                                  Unikey_IMNames[i]))
 			{
 				m_im = i;
 				__config->write(SCIM_IMENGINE_UNIKEY_INPUTMETHOD, m_im);
@@ -794,8 +800,8 @@ void UnikeyInstance::trigger_property(const String &property)
 	else if (!property.compare(0, strlen("/Unikey/OutputCharset/"), "/Unikey/OutputCharset/"))
 	{
 		for (i=0; i<NUM_OUTPUTCHARSET; i++)
-			if (!property.compare(property.length()-Unikey_OCNames[i].length(),
-								  Unikey_OCNames[i].length(),
+			if (!property.compare(strlen("/Unikey/OutputCharset/"),
+								  property.length() - strlen("/Unikey/OutputCharset/"),
 								  Unikey_OCNames[i]))
 			{
 				m_oc = i;

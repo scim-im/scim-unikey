@@ -131,6 +131,21 @@ DllExport UkKeyMapping SimpleTelexMethodMapping[] = {
     {0, vneNormal}
 };
 
+DllExport UkKeyMapping SimpleTelex2MethodMapping[] = {
+    {'Z', vneTone0},
+    {'S', vneTone1},
+    {'F', vneTone2},
+    {'R', vneTone3},
+    {'X', vneTone4},
+    {'J', vneTone5},
+    {'W', vne_telex_w},
+    {'A', vneRoof_a},
+    {'E', vneRoof_e},
+    {'O', vneRoof_o},
+    {'D', vneDd},
+    {0, vneNormal}
+};
+
 DllExport UkKeyMapping VniMethodMapping[] = {
     {'0', vneTone0},
     {'1', vneTone1},
@@ -266,6 +281,9 @@ int UkInputProcessor::setIM(UkInputMethod im)
             break;
         case UkSimpleTelex:
             useBuiltIn(SimpleTelexMethodMapping);
+            break;
+        case UkSimpleTelex2:
+            useBuiltIn(SimpleTelex2MethodMapping);
             break;
         case UkVni:
             useBuiltIn(VniMethodMapping);

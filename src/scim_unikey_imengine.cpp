@@ -46,8 +46,8 @@ static unsigned char WordAutoCommit[] =
     'P', 'Q', 'R', 'S', 'T', 'V', 'X', 'Z'
 };
 
-const String          Unikey_IMNames[]    = {"Telex", "Vni", "STelex"};
-const UkInputMethod   Unikey_IM[]         = {UkTelex, UkVni, UkSimpleTelex};
+const String          Unikey_IMNames[]    = {"Telex", "Vni", "STelex", "STelex2"};
+const UkInputMethod   Unikey_IM[]         = {UkTelex, UkVni, UkSimpleTelex, UkSimpleTelex2};
 const unsigned int    NUM_INPUTMETHOD     = sizeof(Unikey_IM)/sizeof(Unikey_IM[0]);
 
 const String          Unikey_OCNames[]    = {"Unicode",

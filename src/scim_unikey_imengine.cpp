@@ -202,9 +202,6 @@ UnikeyInstance::UnikeyInstance(UnikeyFactory *factory, const String &encoding, i
     t = __config->read(SCIM_IMENGINE_UNIKEY_PROCESSWATWORDBEGIN, &o);
     m_process_w_AtBeginWord = t?o:SCIM_IMENGINE_UNIKEY_PROCESSWATWORDBEGIN_DEF;
 
-    t = __config->read(SCIM_IMENGINE_UNIKEY_CODERTELEX, &o);
-    m_codertelex = t?o:SCIM_IMENGINE_UNIKEY_CODERTELEX_DEF;
-
 // Unikey Options
     t = __config->read(SCIM_IMENGINE_UNIKEY_FREEMARKING, &o);
     m_ukopt.freeMarking = t?o:SCIM_IMENGINE_UNIKEY_FREEMARKING_DEF;
@@ -419,20 +416,14 @@ bool UnikeyInstance::Unikey_process_key_event_direct(const KeyEvent& key)
             UnikeyPutChar(key.code);
         }
 
-        else if (!m_process_w_AtBeginWord &&
-                 (key.code == SCIM_KEY_w || key.code == SCIM_KEY_W) &&
-                 UnikeyAtWordBeginning())
+        else if ((Unikey_IM[m_im] == UkTelex || Unikey_IM[m_im] == UkSimpleTelex2)
+                 && m_process_w_AtBeginWord == false
+                 && UnikeyAtWordBeginning()
+                 && (key.code == SCIM_KEY_w || key.code == SCIM_KEY_W))
         {
             UnikeyPutChar(key.code);
         }
 
-        else if (m_codertelex && Unikey_IM[m_im] == UkTelex
-                 && (key.code == SCIM_KEY_bracketleft || key.code == SCIM_KEY_bracketright
-                     || key.code == SCIM_KEY_braceleft || key.code == SCIM_KEY_braceright)
-            )
-        {
-            UnikeyPutChar(key.code);
-        }
         else
         {
             UnikeyFilter(key.code);
@@ -582,11 +573,25 @@ bool UnikeyInstance::Unikey_process_key_event_preedit(const KeyEvent& key)
                 }
         } // end auto commit char
 
-        if (!m_process_w_AtBeginWord && (key.code == SCIM_KEY_w || key.code == SCIM_KEY_W) && UnikeyAtWordBeginning())
+        if ((Unikey_IM[m_im] == UkTelex || Unikey_IM[m_im] == UkSimpleTelex2)
+                 && m_process_w_AtBeginWord == false
+                 && UnikeyAtWordBeginning()
+                 && (key.code == SCIM_KEY_w || key.code == SCIM_KEY_W))
         {
             UnikeyPutChar(key.code);
+            if (m_ukopt.macroEnabled==0)
+            {
+                forward_key_event(key);
+            }
+            else
+            {
+                m_preeditstring.push_back(key.code);
+                Unikey_update_preedit_string(m_preeditstring, true);
+            }
+
             m_auto_commit = true;
-            return false;
+            
+            return true;
         }
 
         m_auto_commit = false;
@@ -598,15 +603,16 @@ bool UnikeyInstance::Unikey_process_key_event_preedit(const KeyEvent& key)
         {
             UnikeyRestoreKeyStrokes();
         }
+
         else if (key.code >= SCIM_KEY_KP_Multiply && key.code <= SCIM_KEY_KP_9)
+        {
             UnikeyPutChar(key.code);
-        else if (m_codertelex && Unikey_IM[m_im] == UkTelex
-                 && (key.code == SCIM_KEY_bracketleft || key.code == SCIM_KEY_bracketright
-                     || key.code == SCIM_KEY_braceleft || key.code == SCIM_KEY_braceright)
-            )
-            UnikeyPutChar(key.code);
+        }
+
         else
+        {
             UnikeyFilter(key.code);
+        }
 
         if (UnikeyBackspaces > 0)
         {
@@ -777,15 +783,6 @@ PropertyList UnikeyInstance::CreatePropertyList()
                    "of word will change to Ư."));
     props.push_back(prop);
 
-    // coder telex [,],{,}
-    prop.set_key(m_codertelex?
-                 "/Unikey/Options/CoderTelex/Disable":"/Unikey/Options/CoderTelex/Enable");
-    prop.set_label(_("Not use [,],{,} on Telex"));
-    prop.set_icon(m_codertelex?SCIM_ICONDIR SCIM_UNIKEY_ICON_CHECK:"");
-    prop.set_tip(_("Not use [,],{,} for map on Telex"));
-    props.push_back(prop);
-
-
     return props;
 }
 
@@ -919,20 +916,6 @@ void UnikeyInstance::trigger_property(const String &property)
     {
         m_process_w_AtBeginWord = false;
         __config->write(SCIM_IMENGINE_UNIKEY_PROCESSWATWORDBEGIN, false);
-        change = true;
-    }
-
-// coder telex
-    else if (property == "/Unikey/Options/CoderTelex/Enable")
-    {
-        m_codertelex = true;
-        __config->write(SCIM_IMENGINE_UNIKEY_CODERTELEX, true);
-        change = true;
-    }
-    else if (property == "/Unikey/Options/CoderTelex/Disable")
-    {
-        m_codertelex = false;
-        __config->write(SCIM_IMENGINE_UNIKEY_CODERTELEX, false);
         change = true;
     }
 

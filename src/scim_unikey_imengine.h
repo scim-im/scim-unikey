@@ -56,7 +56,6 @@ private:
     UnikeyOptions m_ukopt;                // Unikey Options
     WideString m_preeditstring;           // store PreEdit String
     bool m_preedit;                       // is PreEdit On?
-    bool m_codertelex;                    // is CoderTelex on?
     bool m_process_w_AtBeginWord;         // process W at Begin Word?
     bool m_auto_commit;                   // auto commit?
     std::vector<KeyEvent> m_preeditskey;  // keys to switch preedit and non preedit mode

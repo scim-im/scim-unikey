@@ -44,7 +44,6 @@ static bool    __unikey_modernstyle                 = SCIM_IMENGINE_UNIKEY_MODER
 static bool    __unikey_macroenabled                = SCIM_IMENGINE_UNIKEY_MACROENABLED_DEF;
 static bool    __unikey_spellcheckenabled           = SCIM_IMENGINE_UNIKEY_SPELLCHECKENABLED_DEF;
 static bool    __unikey_autononvnrestore            = SCIM_IMENGINE_UNIKEY_AUTONONVNRESTORE_DEF;
-static bool    __unikey_codertelex                  = SCIM_IMENGINE_UNIKEY_CODERTELEX_DEF;
 static bool    __unikey_processwatwordbegin       = SCIM_IMENGINE_UNIKEY_PROCESSWATWORDBEGIN_DEF;
 
 static GtkTooltips  *__widget_tooltips              = 0;
@@ -55,7 +54,6 @@ static GtkWidget    *__widget_modernstyle           = 0;
 static GtkWidget    *__widget_macroenabled          = 0;
 static GtkWidget    *__widget_spellcheckenabled     = 0;
 static GtkWidget    *__widget_autononvnrestore      = 0;
-static GtkWidget    *__widget_codertelex            = 0;
 static GtkWidget    *__widget_processwatwordbegin   = 0;
 static CMacroTable  __macStore;
 
@@ -263,15 +261,6 @@ static GtkWidget* create_setup_window()
                               _("If enable, type W at begin\n"
                               "of word will change to Ư."), NULL);
 
-// create coder telex checkbox
-        __widget_codertelex = gtk_check_button_new_with_label(_("Not use [,],{,} on Telex"));
-        gtk_box_pack_start(GTK_BOX(vbox), __widget_codertelex, false, false, 0);
-        gtk_container_set_border_width(GTK_CONTAINER(__widget_codertelex), 5);
-        g_signal_connect(__widget_codertelex, "toggled", G_CALLBACK(on_default_toggle_button_toggled), &__unikey_codertelex);
-
-        gtk_tooltips_set_tip (__widget_tooltips, __widget_codertelex,
-                              _("Not use [,],{,} for map on Telex"), NULL);
-
 
         setup_widget_value();
         gtk_widget_show_all(window);
@@ -298,9 +287,6 @@ static void setup_widget_value()
 
     if (__widget_macroenabled)
         gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(__widget_macroenabled), __unikey_macroenabled);
-
-    if (__widget_codertelex)
-        gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(__widget_codertelex), __unikey_codertelex);
 
     if (__widget_processwatwordbegin)
         gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(__widget_processwatwordbegin), __unikey_processwatwordbegin);
@@ -333,9 +319,6 @@ static void load_config(const ConfigPointer &config)
         t = config->read(SCIM_IMENGINE_UNIKEY_AUTONONVNRESTORE, &__unikey_autononvnrestore);
         if (!t) __unikey_autononvnrestore = SCIM_IMENGINE_UNIKEY_AUTONONVNRESTORE_DEF;
 
-        t = config->read(SCIM_IMENGINE_UNIKEY_CODERTELEX, &__unikey_codertelex);
-        if (!t) __unikey_codertelex = SCIM_IMENGINE_UNIKEY_CODERTELEX_DEF;
-
         t = config->read(SCIM_IMENGINE_UNIKEY_PROCESSWATWORDBEGIN, &__unikey_processwatwordbegin);
         if (!t) __unikey_processwatwordbegin = SCIM_IMENGINE_UNIKEY_PROCESSWATWORDBEGIN_DEF;
 
@@ -360,7 +343,6 @@ static void save_config(const ConfigPointer &config)
         config->write(SCIM_IMENGINE_UNIKEY_SPELLCHECKENABLED, __unikey_spellcheckenabled);
         config->write(SCIM_IMENGINE_UNIKEY_AUTONONVNRESTORE, __unikey_autononvnrestore);
         config->write(SCIM_IMENGINE_UNIKEY_AUTONONVNRESTORE, __unikey_autononvnrestore);
-        config->write(SCIM_IMENGINE_UNIKEY_CODERTELEX, __unikey_codertelex);
         config->write(SCIM_IMENGINE_UNIKEY_PROCESSWATWORDBEGIN, __unikey_processwatwordbegin);
 
         s = String(getMacroFile());

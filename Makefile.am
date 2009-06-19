@@ -1,5 +1,4 @@
 SUBDIRS = po ukengine src icon
-EXTRA_DIST = config.rpath m4/ChangeLog  README
-
+EXTRA_DIST = config.rpath README
 
 ACLOCAL_AMFLAGS = -I m4

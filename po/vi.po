@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: scim-unikey\n"
 "Report-Msgid-Bugs-To: mr.lequoctuan@gmail.com\n"
-"POT-Creation-Date: 2009-06-20 20:32+0700\n"
+"POT-Creation-Date: 2009-06-20 20:52+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Le Quoc Tuan <mr.lequoctuan@gmail.com>\n"
 "Language-Team: Le Quoc Tuan <mr.lequoctuan@gmail.com>\n"
@@ -21,19 +21,19 @@ msgstr "Cài đặt Unikey"
 msgid "Unikey option"
 msgstr "Tùy chọn Unikey"
 
-#: src/scim_unikey_setup.cpp:142 src/scim_unikey_imengine.cpp:731
+#: src/scim_unikey_setup.cpp:142 src/scim_unikey_imengine.cpp:735
 msgid "Enable spell check"
 msgstr "Bật kiểm tra chính tả"
 
-#: src/scim_unikey_setup.cpp:148 src/scim_unikey_imengine.cpp:733
+#: src/scim_unikey_setup.cpp:148 src/scim_unikey_imengine.cpp:737
 msgid "If enable, you can decrease mistake when typing"
 msgstr "Nếu bật, bạn có thể giảm lỗi chính tả khi gõ"
 
-#: src/scim_unikey_setup.cpp:151 src/scim_unikey_imengine.cpp:739
+#: src/scim_unikey_setup.cpp:151 src/scim_unikey_imengine.cpp:743
 msgid "Auto restore keys with invalid words"
 msgstr "Tự động khôi phục phím với từ sai"
 
-#: src/scim_unikey_setup.cpp:157 src/scim_unikey_imengine.cpp:741
+#: src/scim_unikey_setup.cpp:157 src/scim_unikey_imengine.cpp:745
 msgid ""
 "When typing a word not in Vietnamese,\n"
 "it will auto restore keystroke into orginal"
@@ -41,11 +41,11 @@ msgstr ""
 "Khi gõ một từ không phải tiếng Việt,\n"
 "nó sẽ tự động khôi phục phím gốc"
 
-#: src/scim_unikey_setup.cpp:161 src/scim_unikey_imengine.cpp:748
+#: src/scim_unikey_setup.cpp:161 src/scim_unikey_imengine.cpp:752
 msgid "Use oà, uý (instead of òa, úy)"
 msgstr "Đặt dấu oà, uý (thay vì òa, úy)"
 
-#: src/scim_unikey_setup.cpp:167 src/scim_unikey_imengine.cpp:756
+#: src/scim_unikey_setup.cpp:167 src/scim_unikey_imengine.cpp:760
 msgid "Allow type with more freedom"
 msgstr "Cho phép gõ tự do"
 
@@ -53,7 +53,7 @@ msgstr "Cho phép gõ tự do"
 msgid "Macro option"
 msgstr "Tùy chọn gõ tắt"
 
-#: src/scim_unikey_setup.cpp:180 src/scim_unikey_imengine.cpp:764
+#: src/scim_unikey_setup.cpp:180 src/scim_unikey_imengine.cpp:768
 msgid "Enable Macro"
 msgstr "Cho phép gõ tắt"
 
@@ -69,11 +69,11 @@ msgstr "Soạn thảo bảng gõ tắt cho chức năng gõ tắt"
 msgid "Telex option"
 msgstr "Tùy chọn cho Telex"
 
-#: src/scim_unikey_setup.cpp:203 src/scim_unikey_imengine.cpp:780
+#: src/scim_unikey_setup.cpp:203 src/scim_unikey_imengine.cpp:784
 msgid "Process W at word begin"
 msgstr "Xử lý phím W ở đầu từ"
 
-#: src/scim_unikey_setup.cpp:209 src/scim_unikey_imengine.cpp:782
+#: src/scim_unikey_setup.cpp:209 src/scim_unikey_imengine.cpp:786
 msgid ""
 "If enable, type W at begin\n"
 "of word will change to Ư."
@@ -93,7 +93,7 @@ msgstr "Phím chuyển chế độ"
 msgid "Preedit is default"
 msgstr "Preedit là mặc định"
 
-#: src/scim_unikey_setup.cpp:245 src/scim_unikey_imengine.cpp:773
+#: src/scim_unikey_setup.cpp:245 src/scim_unikey_imengine.cpp:777
 msgid ""
 "This option is best for most application\n"
 "But you may don't like it because it have an underline when typing"
@@ -164,22 +164,22 @@ msgstr ""
 "Để nhận được sự hỗ trợ hãy ghé thăm:\n"
 "  http://forum.ubuntu-vn.org/viewforum.php?f=85"
 
-#: src/scim_unikey_imengine.cpp:691
+#: src/scim_unikey_imengine.cpp:695
 msgid "Choose input method"
 msgstr "Chọn kiểu gõ"
 
-#: src/scim_unikey_imengine.cpp:708
+#: src/scim_unikey_imengine.cpp:712
 msgid "Choose output charset"
 msgstr "Chọn bảng mã"
 
-#: src/scim_unikey_imengine.cpp:723
+#: src/scim_unikey_imengine.cpp:727
 msgid "Options"
 msgstr "Tùy chọn"
 
-#: src/scim_unikey_imengine.cpp:725
+#: src/scim_unikey_imengine.cpp:729
 msgid "Configure Unikey here"
 msgstr "Cấu hình Unikey ở đây"
 
-#: src/scim_unikey_imengine.cpp:771
+#: src/scim_unikey_imengine.cpp:775
 msgid "Enable PreEdit"
 msgstr "Bật PreEdit"

@@ -408,6 +408,10 @@ bool UnikeyInstance::Unikey_process_key_event_direct(const KeyEvent& key)
             && !UnikeyAtWordBeginning())
         {
             UnikeyRestoreKeyStrokes();
+            if (UnikeyBackspaces == 0)
+            {
+                UnikeyPutChar(key.code);
+            }
         }
 
         else if ((key.code >= SCIM_KEY_KP_0 &&

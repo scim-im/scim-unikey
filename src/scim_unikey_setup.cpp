@@ -129,22 +129,16 @@ static GtkWidget* create_setup_window()
         gtk_window_set_default_icon_from_file(SCIM_ICONDIR SCIM_UNIKEY_ICON_FILENAME, NULL);
         __widget_tooltips = gtk_tooltips_new();
 
-// Create the toplevel box.
-        window = gtk_hbox_new(false, 0);
+// create Unikey option frame
+        GtkWidget *frUkOpt = gtk_frame_new(_("Unikey option"));
+        gtk_container_set_border_width(GTK_CONTAINER(frUkOpt), 5);
 
-// create vbox
-        GtkWidget *vbox0 = gtk_vbox_new(false, 0);
-        gtk_box_pack_start(GTK_BOX(window), vbox0, false, false, 0);
+        // create box for frame
+        GtkWidget *vbox = gtk_vbox_new(true, 0);
+        gtk_container_add(GTK_CONTAINER(frUkOpt), vbox);
 
-// create Common Frame
-        GtkWidget *fr = gtk_frame_new(_("Unikey option"));
-        gtk_box_pack_start(GTK_BOX(vbox0), fr, false, false, 0);
 
-        GtkWidget *vbox = gtk_vbox_new(false, 0);
-        gtk_container_add(GTK_CONTAINER(fr), vbox);
-        gtk_container_set_border_width(GTK_CONTAINER(fr), 5);
-
-// create spellcheck checkbox
+        // create spellcheck checkbox
         __widget_spellcheckenabled = gtk_check_button_new_with_label(_("Enable spell check"));
         gtk_box_pack_start(GTK_BOX(vbox), __widget_spellcheckenabled, false, false, 0);
         gtk_container_set_border_width(GTK_CONTAINER(__widget_spellcheckenabled), 5);
@@ -153,7 +147,7 @@ static GtkWidget* create_setup_window()
         gtk_tooltips_set_tip (__widget_tooltips, __widget_spellcheckenabled,
                               _("If enable, you can decrease mistake when typing"), NULL);
 
-// create autononvnrestore checkbox
+        // create autononvnrestore checkbox
         __widget_autononvnrestore = gtk_check_button_new_with_label(_("Auto restore keys with invalid words"));
         gtk_box_pack_start(GTK_BOX(vbox), __widget_autononvnrestore, false, false, 0);
         gtk_container_set_border_width(GTK_CONTAINER(__widget_autononvnrestore), 5);
@@ -163,46 +157,85 @@ static GtkWidget* create_setup_window()
                               _("When typing a word not in Vietnamese,\n"
                               "it will auto restore keystroke into orginal"), NULL);
 
-// create modernstyle checkbox
+        // create modernstyle checkbox
         __widget_modernstyle = gtk_check_button_new_with_label(_("Use oà, uý (instead of òa, úy)"));
         gtk_box_pack_start(GTK_BOX(vbox), __widget_modernstyle, false, false, 0);
         gtk_container_set_border_width(GTK_CONTAINER(__widget_modernstyle), 5);
         g_signal_connect(__widget_modernstyle, "toggled", G_CALLBACK(on_default_toggle_button_toggled), &__unikey_modernstyle);
 
-// create freemarking checkbox
+        // create freemarking checkbox
         __widget_freemarking = gtk_check_button_new_with_label(_("Allow type with more freedom"));
         gtk_box_pack_start(GTK_BOX(vbox), __widget_freemarking, false, false, 0);
         gtk_container_set_border_width(GTK_CONTAINER(__widget_freemarking), 5);
         g_signal_connect(__widget_freemarking, "toggled", G_CALLBACK(on_default_toggle_button_toggled), &__unikey_freemarking);
 
-/*
+// create Macro option frame
+        GtkWidget* frMacro = gtk_frame_new(_("Macro option"));
+        gtk_container_set_border_width(GTK_CONTAINER(frMacro), 5);
+
+        vbox = gtk_vbox_new(true, 0);
+        gtk_container_add(GTK_CONTAINER(frMacro), vbox);
+
+        // create macroenabled checkbox
+        __widget_macroenabled = gtk_check_button_new_with_label(_("Enable Macro"));
+        gtk_box_pack_start(GTK_BOX(vbox), __widget_macroenabled, false, false, 0);
+        gtk_container_set_border_width(GTK_CONTAINER(__widget_macroenabled), 5);
+        g_signal_connect(__widget_macroenabled, "toggled", G_CALLBACK(on_default_toggle_button_toggled), &__unikey_macroenabled);
+
+        // create macroedit button
+        GtkWidget* __widget_macrotable = gtk_button_new_with_label(_("Macro Table"));
+        gtk_box_pack_start(GTK_BOX(vbox), __widget_macrotable, false, false, 0);
+        gtk_container_set_border_width(GTK_CONTAINER(__widget_macrotable), 5);
+        g_signal_connect(__widget_macrotable, "clicked", G_CALLBACK(on_macrotable_button_clicked), NULL);
+
+        gtk_tooltips_set_tip (__widget_tooltips, __widget_macrotable,
+                              _("Edit the macro table for Macro function"), NULL);
+
+
+// create Telex option frame
+        GtkWidget *frTelex = gtk_frame_new(_("Telex option"));
+        gtk_container_set_border_width(GTK_CONTAINER(frTelex), 5);
+
+        vbox = gtk_vbox_new(true, 0);
+        gtk_container_add(GTK_CONTAINER(frTelex), vbox);
+
+        // create process w at word begin checkbox
+        __widget_processwatwordbegin = gtk_check_button_new_with_label(_("Process W at word begin"));
+        gtk_box_pack_start(GTK_BOX(vbox), __widget_processwatwordbegin, false, false, 0);
+        gtk_container_set_border_width(GTK_CONTAINER(__widget_processwatwordbegin), 5);
+        g_signal_connect(__widget_processwatwordbegin, "toggled", G_CALLBACK(on_default_toggle_button_toggled), &__unikey_processwatwordbegin);
+
+        gtk_tooltips_set_tip (__widget_tooltips, __widget_processwatwordbegin,
+                              _("If enable, type W at begin\n"
+                              "of word will change to Ư."), NULL);
+
 // create preedit frame
-*/
-        GtkWidget *prefr = gtk_frame_new(_("Typing mode"));
-        gtk_container_set_border_width(GTK_CONTAINER(prefr), 5);
-        gtk_box_pack_start(GTK_BOX(vbox0), prefr, false, false, 0);
+        GtkWidget *frPreEdit = gtk_frame_new(_("Typing mode"));
+        gtk_container_set_border_width(GTK_CONTAINER(frPreEdit), 5);
 
-        vbox = gtk_vbox_new(false, 0);
-        gtk_container_add(GTK_CONTAINER(prefr), vbox);
+        vbox = gtk_vbox_new(true, 0);
+        gtk_container_add(GTK_CONTAINER(frPreEdit), vbox);
 
-// create preedit switch key
+        // create preedit switch key
         GtkWidget *psbox = gtk_hbox_new(false, 0);
         gtk_box_pack_start(GTK_BOX(vbox), psbox, false, false, 0);
+
 
         GtkWidget *lpskey = gtk_label_new(_("Mode switch key:"));
         gtk_box_pack_start(GTK_BOX(psbox), lpskey, false, false, 5);
 
-        __widget_preedit_skey = gtk_entry_new();
-        gtk_entry_set_editable(GTK_ENTRY(__widget_preedit_skey), false);
-        gtk_box_pack_start(GTK_BOX(psbox), __widget_preedit_skey, true, false, 0);
 
         GtkWidget *bpskey = gtk_button_new_with_label("...");
-        gtk_box_pack_start(GTK_BOX(psbox), bpskey, true, true, 0);
+        gtk_box_pack_end(GTK_BOX(psbox), bpskey, false, false, 0);
         gtk_container_set_border_width(GTK_CONTAINER(bpskey), 5);
         g_signal_connect(bpskey, "clicked", G_CALLBACK(on_hotkey_button_clicked), __widget_preedit_skey);
 
+        __widget_preedit_skey = gtk_entry_new();
+        gtk_entry_set_editable(GTK_ENTRY(__widget_preedit_skey), false);
+        gtk_box_pack_end(GTK_BOX(psbox), __widget_preedit_skey, true, true, 0);
 
-// create preedit checkbox
+
+        // create preedit checkbox
         __widget_preedit = gtk_check_button_new_with_label(_("Preedit is default"));
         gtk_box_pack_start(GTK_BOX(vbox), __widget_preedit, false, false, 0);
         gtk_container_set_border_width(GTK_CONTAINER(__widget_preedit), 5);
@@ -213,54 +246,22 @@ static GtkWidget* create_setup_window()
                               "But you may don't like it because it have an underline when typing"), NULL);
 
 
+// Create the toplevel box.
+        window = gtk_vbox_new(false, 0);
 
-//
+        GtkWidget* hbox = gtk_hbox_new(false, 0);
+        gtk_box_pack_start(GTK_BOX(window), hbox, true, true, 0);
+        gtk_box_pack_start(GTK_BOX(window), frPreEdit, true, true, 0);
+
+        
         vbox = gtk_vbox_new(false, 0);
-        gtk_box_pack_start(GTK_BOX(window), vbox, true, true, 0);
+        // add frame to hbox
+        gtk_box_pack_start(GTK_BOX(hbox), frUkOpt, true, true, 0);
+        gtk_box_pack_start(GTK_BOX(hbox), vbox, true, true, 0);
 
-// right frame 1
-        fr = gtk_frame_new(_("Macro option"));
-        gtk_box_pack_start(GTK_BOX(vbox), fr, false, true, 0);
-        gtk_container_set_border_width(GTK_CONTAINER(fr), 5);
-
-        // (frame 2)
-        GtkWidget *fr2 = gtk_frame_new(_("Telex option"));
-        gtk_box_pack_start(GTK_BOX(vbox), fr2, false, false, 0);
-        gtk_container_set_border_width(GTK_CONTAINER(fr2), 5);
-
-        vbox = gtk_vbox_new(false, 0);
-        gtk_container_add(GTK_CONTAINER(fr), vbox);
-
-// create macroenabled checkbox
-        __widget_macroenabled = gtk_check_button_new_with_label(_("Enable Macro"));
-        gtk_box_pack_start(GTK_BOX(vbox), __widget_macroenabled, false, false, 0);
-        gtk_container_set_border_width(GTK_CONTAINER(__widget_macroenabled), 5);
-        g_signal_connect(__widget_macroenabled, "toggled", G_CALLBACK(on_default_toggle_button_toggled), &__unikey_macroenabled);
-
-// create macroedit button
-        GtkWidget* __widget_macrotable = gtk_button_new_with_label(_("Macro Table"));
-        gtk_box_pack_start(GTK_BOX(vbox), __widget_macrotable, false, false, 0);
-        gtk_container_set_border_width(GTK_CONTAINER(__widget_macrotable), 5);
-        g_signal_connect(__widget_macrotable, "clicked", G_CALLBACK(on_macrotable_button_clicked), NULL);
-
-        gtk_tooltips_set_tip (__widget_tooltips, __widget_macrotable,
-                              _("Edit the macro table for Macro function"), NULL);
-
-
-// right frame 2
-        vbox = gtk_vbox_new(false, 0);
-        gtk_container_add(GTK_CONTAINER(fr2), vbox);
-
-// create process w at word begin checkbox
-        __widget_processwatwordbegin = gtk_check_button_new_with_label(_("Process W at word begin"));
-        gtk_box_pack_start(GTK_BOX(vbox), __widget_processwatwordbegin, false, false, 0);
-        gtk_container_set_border_width(GTK_CONTAINER(__widget_processwatwordbegin), 5);
-        g_signal_connect(__widget_processwatwordbegin, "toggled", G_CALLBACK(on_default_toggle_button_toggled), &__unikey_processwatwordbegin);
-
-        gtk_tooltips_set_tip (__widget_tooltips, __widget_processwatwordbegin,
-                              _("If enable, type W at begin\n"
-                              "of word will change to Ư."), NULL);
-
+        // add frame to vbox
+        gtk_box_pack_start(GTK_BOX(vbox), frMacro, true, true, 0);
+        gtk_box_pack_start(GTK_BOX(vbox), frTelex, true, true, 0);
 
         setup_widget_value();
         gtk_widget_show_all(window);

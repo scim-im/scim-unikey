@@ -566,24 +566,34 @@ static void on_key_edited (GtkCellRendererText *celltext, const gchar *string_pa
 
     model = GTK_TREE_MODEL (data);
 
-    if (!strcmp(new_text, "..."))
+    if (strlen(new_text) <= 0 || strcmp(new_text, "...") == 0)
+    {
         return;
+    }
+    else if (strlen(new_text) >= MAX_MACRO_KEY_LEN)
+    {
+        curkey = (gchar*)new_text;
+        curkey[MAX_MACRO_KEY_LEN-1] = '\0';
+    }
 
     b = gtk_tree_model_get_iter_first(model, &iter);
     while (b)
     {
         gtk_tree_model_get(model, &iter, COL_KEY, &curkey, -1);
-        if (!strcasecmp(curkey, new_text))
+        if (strcasecmp(curkey, new_text) == 0)
             return;
 
         b = gtk_tree_model_iter_next(model, &iter);
     }
+
     gtk_tree_model_get_iter_from_string(model, &iter, string_path);
     gtk_tree_model_get(model, &iter, COL_KEY, &oldkey, COL_REPLACE, &oldreplace, -1);
 
     gtk_list_store_set(GTK_LIST_STORE(model), &iter, COL_KEY, new_text, -1);
     if (!strcmp(oldkey, "..."))
+    {
         gtk_list_store_set(GTK_LIST_STORE(model), &iter, COL_REPLACE, _("(replace text)"));
+    }
 
     on_end_macro_table(GTK_LIST_STORE(model));
 }
@@ -592,14 +602,23 @@ static void on_replace_edited (GtkCellRendererText *celltext, const gchar *strin
 {
     GtkTreeModel    *model;
     GtkTreeIter     iter;
-    gchar           *oldkey;
+    gchar           *oldkey, *tmp;
 
     model = GTK_TREE_MODEL (data);
     gtk_tree_model_get_iter_from_string(model, &iter, string_path);
 
     gtk_tree_model_get(model, &iter, COL_KEY, &oldkey, -1);
-    if (strcmp(oldkey, "..."))
+
+    if (strlen(new_text) >= MAX_MACRO_TEXT_LEN)
+    {
+        tmp = (gchar*)new_text;
+        tmp[MAX_MACRO_TEXT_LEN-1] = '\0';
+    }
+
+    if (strcmp(oldkey, "...") != 0)
+    {
         gtk_list_store_set(GTK_LIST_STORE(model), &iter, COL_REPLACE, new_text, -1);
+    }
 }
 
 static gboolean iter_2_macro(GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, gpointer data)

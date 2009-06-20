@@ -1,11 +1,11 @@
 EXTRA_DIST                  = diff README COPYING
 
-unikey_zmoddir              = ${libdir}
-unikey_zmod_LTLIBRARIES     = libunikey-zmod.la
+unikey_scimdir              = ${libdir}
+unikey_scim_LTLIBRARIES     = libunikey-scim.la
 
-libunikey_zmod_la_LDFLAGS= -version-info $(UNIKEY_CURRENT):$(UNIKEY_REVISION):$(UNIKEY_AGE)
+libunikey_scim_la_LDFLAGS= -version-info $(UNIKEY_CURRENT):$(UNIKEY_REVISION):$(UNIKEY_AGE)
 
-libunikey_zmod_la_SOURCES = \
+libunikey_scim_la_SOURCES = \
 	byteio.cpp \
 	byteio.h \
 	charset.cpp \

@@ -232,11 +232,12 @@ static GtkWidget* create_setup_window()
         GtkWidget *bpskey = gtk_button_new_with_label("...");
         gtk_box_pack_end(GTK_BOX(psbox), bpskey, false, false, 0);
         gtk_container_set_border_width(GTK_CONTAINER(bpskey), 5);
-        g_signal_connect(bpskey, "clicked", G_CALLBACK(on_hotkey_button_clicked), __widget_preedit_skey);
 
         __widget_preedit_skey = gtk_entry_new();
         gtk_entry_set_editable(GTK_ENTRY(__widget_preedit_skey), false);
         gtk_box_pack_end(GTK_BOX(psbox), __widget_preedit_skey, true, true, 0);
+
+        g_signal_connect(bpskey, "clicked", G_CALLBACK(on_hotkey_button_clicked), __widget_preedit_skey);
 
 
         // create preedit checkbox

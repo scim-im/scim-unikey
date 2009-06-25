@@ -7,6 +7,10 @@
    License: GNU LESSER GENERAL PUBLIC LICENSE v2.1
 */
 
+#ifdef HAVE_CONFIG_H
+#include "config.h"
+#endif
+
 #define Uses_SCIM_CONFIG_BASE
 
 #include <libintl.h>

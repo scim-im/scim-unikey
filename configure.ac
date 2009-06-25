@@ -107,6 +107,7 @@ AC_CONFIG_FILES([Makefile
   ukengine/Makefile
   icon/Makefile
   po/Makefile.in
+  setup/Makefile
 ])
 AC_OUTPUT
 

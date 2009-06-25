@@ -7,25 +7,27 @@ libunikey_scim_la_LDFLAGS= -version-info $(UNIKEY_CURRENT):$(UNIKEY_REVISION):$(
 
 libunikey_scim_la_SOURCES = \
 	byteio.cpp \
-	byteio.h \
 	charset.cpp \
-	charset.h \
 	convert.cpp \
 	data.cpp \
-	data.h \
 	error.cpp \
 	inputproc.cpp \
+	mactab.cpp \
+	pattern.cpp \
+	ukengine.cpp \
+	unikey.cpp \
+	usrkeymap.cpp
+
+noinst_HEADERS = \
+	byteio.h \
+	charset.h \
+	data.h \
 	inputproc.h \
 	keycons.h \
-	mactab.cpp \
 	mactab.h \
-	pattern.cpp \
 	pattern.h \
-	ukengine.cpp \
 	ukengine.h \
-	unikey.cpp \
 	unikey.h \
-	usrkeymap.cpp \
 	usrkeymap.h \
 	vnconv.h \
 	vnlexi.h

@@ -12,6 +12,10 @@
 #define Uses_SCIM_CONFIG_BASE
 #define Uses_SCIM_CONFIG_PATH
 
+#ifdef HAVE_CONFIG_H
+#include "config.h"
+#endif
+
 #include <libintl.h>
 #define _(String) dgettext(PACKAGE_NAME,String)
 
@@ -289,21 +293,21 @@ void UnikeyInstance::Unikey_send_backspace(int nBackspace)
 
 void UnikeyInstance::Unikey_update_preedit_string(const WideString s, const bool visible)
 {
-    AttributeList list;
+    AttributeList attlist;
     Attribute att;
 
     // underline preedit string
     att = Attribute(0, s.length(), SCIM_ATTR_DECORATE, SCIM_ATTR_DECORATE_UNDERLINE);
-    list.push_back(att);
+    attlist.push_back(att);
 
     if (m_ukopt.spellCheckEnabled==1 && UnikeyLastWordIsNonVn())
     {
         // red preedit string
         att = Attribute(0, s.length(), SCIM_ATTR_FOREGROUND, 0xff0000);
-        list.push_back(att);
+        attlist.push_back(att);
     }
 
-    update_preedit_string(s, list);
+    update_preedit_string(s, attlist);
     update_preedit_caret(s.length());
 
     if (visible == true)
@@ -489,14 +493,12 @@ bool UnikeyInstance::Unikey_process_key_event_preedit(const KeyEvent& key)
     if (key.is_key_release())
         return false;
 
-    if (key.code >= SCIM_KEY_Shift_L && key.code <= SCIM_KEY_Hyper_R)
-        return false;
-
-    else if (key.code == SCIM_KEY_Tab || key.code == SCIM_KEY_Return
-             || key.code == SCIM_KEY_Delete || key.code == SCIM_KEY_KP_Enter
+    if (key.code == SCIM_KEY_Tab
+             || key.code == SCIM_KEY_Return
+             || key.code == SCIM_KEY_Delete
+             || key.code == SCIM_KEY_KP_Enter
              || (key.code >= SCIM_KEY_Home && key.code <= SCIM_KEY_Insert)
-             || (key.code >= SCIM_KEY_KP_Home && key.code <= SCIM_KEY_KP_Delete)
-        )
+             || (key.code >= SCIM_KEY_KP_Home && key.code <= SCIM_KEY_KP_Delete))
     {
         if (m_preeditstring.length())
         {
@@ -508,6 +510,9 @@ bool UnikeyInstance::Unikey_process_key_event_preedit(const KeyEvent& key)
         reset();
         return false;
     }
+
+    else if (key.code >= SCIM_KEY_Shift_L && key.code <= SCIM_KEY_Hyper_R)
+        return false;
 
     else if (key.code == SCIM_KEY_BackSpace)
     {

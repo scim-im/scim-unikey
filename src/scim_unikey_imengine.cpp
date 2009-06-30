@@ -748,7 +748,7 @@ PropertyList UnikeyInstance::CreatePropertyList()
     prop.set_label(_("Auto restore keys with invalid words"));
     prop.set_icon(m_ukopt.autoNonVnRestore?SCIM_ICONDIR SCIM_UNIKEY_ICON_CHECK:"");
     prop.set_tip(_("When typing a word not in Vietnamese,\n"
-                   "it will auto restore keystroke into orginal"));
+                   "it will auto restore keystroke into original"));
     props.push_back(prop);
 
     // modern style

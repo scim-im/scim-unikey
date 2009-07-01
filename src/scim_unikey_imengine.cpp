@@ -398,9 +398,7 @@ bool UnikeyInstance::Unikey_process_key_event_direct(const KeyEvent& key)
         }
     }
 
-    if (   (key.code >= SCIM_KEY_space && key.code <= SCIM_KEY_asciitilde)
-           || (key.code >= SCIM_KEY_KP_Multiply && key.code <= SCIM_KEY_KP_9)
-        )
+    if (key.code >= SCIM_KEY_space && key.code <= SCIM_KEY_asciitilde)
     {
         UnikeySetCapsState(key.mask & SCIM_KEY_ShiftMask,
                            key.mask & SCIM_KEY_CapsLockMask);
@@ -416,12 +414,6 @@ bool UnikeyInstance::Unikey_process_key_event_direct(const KeyEvent& key)
             {
                 UnikeyPutChar(key.code);
             }
-        }
-
-        else if ((key.code >= SCIM_KEY_KP_0 &&
-                  key.code <= SCIM_KEY_KP_9))
-        {
-            UnikeyPutChar(key.code);
         }
 
         else if ((Unikey_IM[m_im] == UkTelex || Unikey_IM[m_im] == UkSimpleTelex2)
@@ -562,9 +554,7 @@ bool UnikeyInstance::Unikey_process_key_event_preedit(const KeyEvent& key)
         return true;
     }
 
-    else if (   (key.code >= SCIM_KEY_space && key.code <= SCIM_KEY_asciitilde)
-                || (key.code >= SCIM_KEY_KP_Multiply && key.code <= SCIM_KEY_KP_9)
-        )
+    else if (key.code >= SCIM_KEY_space && key.code <= SCIM_KEY_asciitilde)
     {
         UnikeySetCapsState(key.mask & SCIM_KEY_ShiftMask, key.mask & SCIM_KEY_CapsLockMask);
 
@@ -613,11 +603,6 @@ bool UnikeyInstance::Unikey_process_key_event_preedit(const KeyEvent& key)
             UnikeyRestoreKeyStrokes();
         }
 
-        else if (key.code >= SCIM_KEY_KP_Multiply && key.code <= SCIM_KEY_KP_9)
-        {
-            UnikeyPutChar(key.code);
-        }
-
         else
         {
             UnikeyFilter(key.code);
@@ -655,25 +640,16 @@ bool UnikeyInstance::Unikey_process_key_event_preedit(const KeyEvent& key)
 
         if (m_preeditstring.length())
         {
-            if (key.code >= SCIM_KEY_KP_Multiply && key.code <= SCIM_KEY_KP_9)
+            for (i=0; i < sizeof(WordBreakSyms); i++)
             {
-                commit_string(m_preeditstring);
-                hide_preedit_string();
-                m_preeditstring.clear();
-                reset();
-                return true;
-            }
-            else
-            {
-                for (i=0; i < sizeof(WordBreakSyms); i++)
-                    if (WordBreakSyms[i] == m_preeditstring[m_preeditstring.length()-1] && key.code == WordBreakSyms[i])
-                    {
-                        commit_string(m_preeditstring);
-                        hide_preedit_string();
-                        m_preeditstring.clear();
-                        reset();
-                        return true;
-                    }
+                if (WordBreakSyms[i] == m_preeditstring[m_preeditstring.length()-1] && key.code == WordBreakSyms[i])
+                {
+                    commit_string(m_preeditstring);
+                    hide_preedit_string();
+                    m_preeditstring.clear();
+                    reset();
+                    return true;
+                }
             }
         }
 

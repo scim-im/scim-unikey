@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: scim-unikey 0.3~r32\n"
 "Report-Msgid-Bugs-To: mr.lequoctuan@gmail.com\n"
-"POT-Creation-Date: 2009-06-25 18:20+0700\n"
+"POT-Creation-Date: 2009-07-01 19:50+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,67 +38,67 @@ msgid ""
 "  http://forum.ubuntu-vn.org/viewforum.php?f=85"
 msgstr ""
 
-#: src/scim_unikey_imengine.cpp:700
+#: src/scim_unikey_imengine.cpp:685
 msgid "Choose input method"
 msgstr ""
 
-#: src/scim_unikey_imengine.cpp:717
+#: src/scim_unikey_imengine.cpp:702
 msgid "Choose output charset"
 msgstr ""
 
-#: src/scim_unikey_imengine.cpp:732
+#: src/scim_unikey_imengine.cpp:717
 msgid "Options"
 msgstr ""
 
-#: src/scim_unikey_imengine.cpp:734
+#: src/scim_unikey_imengine.cpp:719
 msgid "Configure Unikey here"
 msgstr ""
 
-#: src/scim_unikey_imengine.cpp:740 setup/scim_unikey_setup.cpp:146
+#: src/scim_unikey_imengine.cpp:725 setup/scim_unikey_setup.cpp:146
 msgid "Enable spell check"
 msgstr ""
 
-#: src/scim_unikey_imengine.cpp:742 setup/scim_unikey_setup.cpp:152
+#: src/scim_unikey_imengine.cpp:727 setup/scim_unikey_setup.cpp:152
 msgid "If enable, you can decrease mistake when typing"
 msgstr ""
 
-#: src/scim_unikey_imengine.cpp:748 setup/scim_unikey_setup.cpp:155
+#: src/scim_unikey_imengine.cpp:733 setup/scim_unikey_setup.cpp:155
 msgid "Auto restore keys with invalid words"
 msgstr ""
 
-#: src/scim_unikey_imengine.cpp:750 setup/scim_unikey_setup.cpp:161
+#: src/scim_unikey_imengine.cpp:735 setup/scim_unikey_setup.cpp:161
 msgid ""
 "When typing a word not in Vietnamese,\n"
-"it will auto restore keystroke into orginal"
+"it will auto restore keystroke into original"
 msgstr ""
 
-#: src/scim_unikey_imengine.cpp:757 setup/scim_unikey_setup.cpp:165
+#: src/scim_unikey_imengine.cpp:742 setup/scim_unikey_setup.cpp:165
 msgid "Use oà, uý (instead of òa, úy)"
 msgstr ""
 
-#: src/scim_unikey_imengine.cpp:765 setup/scim_unikey_setup.cpp:171
+#: src/scim_unikey_imengine.cpp:750 setup/scim_unikey_setup.cpp:171
 msgid "Allow type with more freedom"
 msgstr ""
 
-#: src/scim_unikey_imengine.cpp:773 setup/scim_unikey_setup.cpp:184
+#: src/scim_unikey_imengine.cpp:758 setup/scim_unikey_setup.cpp:184
 msgid "Enable Macro"
 msgstr ""
 
-#: src/scim_unikey_imengine.cpp:780
+#: src/scim_unikey_imengine.cpp:765
 msgid "Enable PreEdit"
 msgstr ""
 
-#: src/scim_unikey_imengine.cpp:782 setup/scim_unikey_setup.cpp:249
+#: src/scim_unikey_imengine.cpp:767 setup/scim_unikey_setup.cpp:250
 msgid ""
 "This option is best for most application\n"
 "But you may don't like it because it have an underline when typing"
 msgstr ""
 
-#: src/scim_unikey_imengine.cpp:789 setup/scim_unikey_setup.cpp:207
+#: src/scim_unikey_imengine.cpp:774 setup/scim_unikey_setup.cpp:207
 msgid "Process W at word begin"
 msgstr ""
 
-#: src/scim_unikey_imengine.cpp:791 setup/scim_unikey_setup.cpp:213
+#: src/scim_unikey_imengine.cpp:776 setup/scim_unikey_setup.cpp:213
 msgid ""
 "If enable, type W at begin\n"
 "of word will change to Ư."
@@ -136,30 +136,30 @@ msgstr ""
 msgid "Mode switch key:"
 msgstr ""
 
-#: setup/scim_unikey_setup.cpp:243
+#: setup/scim_unikey_setup.cpp:244
 msgid "Preedit is default"
 msgstr ""
 
-#: setup/scim_unikey_setup.cpp:400
+#: setup/scim_unikey_setup.cpp:401
 msgid "Macro table definition"
 msgstr ""
 
-#: setup/scim_unikey_setup.cpp:428
+#: setup/scim_unikey_setup.cpp:429
 msgid "Word"
 msgstr ""
 
-#: setup/scim_unikey_setup.cpp:436
+#: setup/scim_unikey_setup.cpp:437
 msgid "Replace with"
 msgstr ""
 
-#: setup/scim_unikey_setup.cpp:443
+#: setup/scim_unikey_setup.cpp:444
 msgid "Delete"
 msgstr ""
 
-#: setup/scim_unikey_setup.cpp:448
+#: setup/scim_unikey_setup.cpp:449
 msgid "Delete All"
 msgstr ""
 
-#: setup/scim_unikey_setup.cpp:600
+#: setup/scim_unikey_setup.cpp:601
 msgid "(replace text)"
 msgstr ""

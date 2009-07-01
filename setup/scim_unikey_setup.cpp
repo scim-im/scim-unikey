@@ -159,7 +159,7 @@ static GtkWidget* create_setup_window()
 
         gtk_tooltips_set_tip (__widget_tooltips, __widget_autononvnrestore,
                               _("When typing a word not in Vietnamese,\n"
-                              "it will auto restore keystroke into orginal"), NULL);
+                              "it will auto restore keystroke into original"), NULL);
 
         // create modernstyle checkbox
         __widget_modernstyle = gtk_check_button_new_with_label(_("Use oà, uý (instead of òa, úy)"));

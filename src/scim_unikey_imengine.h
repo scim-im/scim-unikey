@@ -49,6 +49,7 @@ private:
     bool Unikey_process_key_event_preedit(const KeyEvent& key);
     void Unikey_send_backspace(int nBackspace);
     void Unikey_update_preedit_string(const WideString s, const bool visible);
+    void Unikey_commit_key_event(const KeyEvent& key);
     PropertyList CreatePropertyList();
 
     int m_im;                             // input method

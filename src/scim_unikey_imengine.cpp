@@ -320,6 +320,15 @@ void UnikeyInstance::Unikey_update_preedit_string(const WideString s, const bool
     }
 }
 
+void UnikeyInstance::Unikey_commit_key_event(const KeyEvent& key)
+{
+    static WideString s;
+
+    s.clear();
+    s.push_back(key.code);
+    commit_string(s);
+}
+
 bool UnikeyInstance::process_key_event(const KeyEvent& key)
 {
     bool tmp;
@@ -451,7 +460,7 @@ bool UnikeyInstance::Unikey_process_key_event_direct(const KeyEvent& key)
         }
         else
         {
-            forward_key_event(key);
+            Unikey_commit_key_event(key);
             return true;
         }
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: scim-unikey\n"
 "Report-Msgid-Bugs-To: mr.lequoctuan@gmail.com\n"
-"POT-Creation-Date: 2009-07-01 19:50+0700\n"
+"POT-Creation-Date: 2009-07-04 10:59+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Le Quoc Tuan <mr.lequoctuan@gmail.com>\n"
 "Language-Team: Le Quoc Tuan <mr.lequoctuan@gmail.com>\n"
@@ -18,10 +18,9 @@ msgid ""
 "This IME work best when environment variable are\n"
 "- GTK_IM_MODULE=scim-bridge\n"
 "- QT_IM_MODULE=xim\n"
-" If you use preedit, you don't not need that\n"
 "\n"
 "Some time, in some application, you \"must\"\n"
-"enable Preedit to type best\n"
+"enable Preedit to input properly\n"
 "\n"
 "In some application, scim can't enable,\n"
 "this is not a bug of scim-unikey.\n"
@@ -34,12 +33,12 @@ msgid ""
 "For other support goto:\n"
 "  http://forum.ubuntu-vn.org/viewforum.php?f=85"
 msgstr ""
-"IME này hoạt động tốt nhất khi giá trị biến mỗi trường là\n"
+"IME này hoạt động tốt nhất khi giá trị biến môi trường là\n"
 "- GTK_IM_MODULE=scim-bridge\n"
-"- QT_IM_MODULE=ximNếu bạn dùng preedit, bạn không cần điều đó\n"
+"- QT_IM_MODULE=xim\n"
 "\n"
 "Thỉnh thoảng, trong một vài ứng dụng, bạn \"phải\"\n"
-"bật chức năng Preedit để gõ được tốt\n"
+"bật chức năng Preedit để có thể gõ được chính xác\n"
 "\n"
 "Trong vài ứng dụng, scim không thể bật,\n"
 "đây không phải là bug của scim-unikey.\n"
@@ -52,35 +51,35 @@ msgstr ""
 "Để nhận được sự hỗ trợ hãy ghé thăm:\n"
 "  http://forum.ubuntu-vn.org/viewforum.php?f=85"
 
-#: src/scim_unikey_imengine.cpp:685
+#: src/scim_unikey_imengine.cpp:684
 msgid "Choose input method"
 msgstr "Chọn kiểu gõ"
 
-#: src/scim_unikey_imengine.cpp:702
+#: src/scim_unikey_imengine.cpp:701
 msgid "Choose output charset"
 msgstr "Chọn bảng mã"
 
-#: src/scim_unikey_imengine.cpp:717
+#: src/scim_unikey_imengine.cpp:716
 msgid "Options"
 msgstr "Tùy chọn"
 
-#: src/scim_unikey_imengine.cpp:719
+#: src/scim_unikey_imengine.cpp:718
 msgid "Configure Unikey here"
 msgstr "Cấu hình Unikey ở đây"
 
-#: src/scim_unikey_imengine.cpp:725 setup/scim_unikey_setup.cpp:146
+#: src/scim_unikey_imengine.cpp:724 setup/setup-main.glade:144
 msgid "Enable spell check"
 msgstr "Bật kiểm tra chính tả"
 
-#: src/scim_unikey_imengine.cpp:727 setup/scim_unikey_setup.cpp:152
+#: src/scim_unikey_imengine.cpp:726
 msgid "If enable, you can decrease mistake when typing"
 msgstr "Nếu bật, bạn có thể giảm lỗi chính tả khi gõ"
 
-#: src/scim_unikey_imengine.cpp:733 setup/scim_unikey_setup.cpp:155
+#: src/scim_unikey_imengine.cpp:732 setup/setup-main.glade:156
 msgid "Auto restore keys with invalid words"
 msgstr "Tự động khôi phục phím với từ sai"
 
-#: src/scim_unikey_imengine.cpp:735 setup/scim_unikey_setup.cpp:161
+#: src/scim_unikey_imengine.cpp:734
 msgid ""
 "When typing a word not in Vietnamese,\n"
 "it will auto restore keystroke into original"
@@ -88,23 +87,23 @@ msgstr ""
 "Khi gõ một từ không phải tiếng Việt,\n"
 "nó sẽ tự động khôi phục phím gốc"
 
-#: src/scim_unikey_imengine.cpp:742 setup/scim_unikey_setup.cpp:165
+#: src/scim_unikey_imengine.cpp:741 setup/setup-main.glade:168
 msgid "Use oà, uý (instead of òa, úy)"
 msgstr "Đặt dấu oà, uý (thay vì òa, úy)"
 
-#: src/scim_unikey_imengine.cpp:750 setup/scim_unikey_setup.cpp:171
+#: src/scim_unikey_imengine.cpp:749 setup/setup-main.glade:180
 msgid "Allow type with more freedom"
 msgstr "Cho phép gõ tự do"
 
-#: src/scim_unikey_imengine.cpp:758 setup/scim_unikey_setup.cpp:184
+#: src/scim_unikey_imengine.cpp:757
 msgid "Enable Macro"
 msgstr "Cho phép gõ tắt"
 
-#: src/scim_unikey_imengine.cpp:765
+#: src/scim_unikey_imengine.cpp:764
 msgid "Enable PreEdit"
 msgstr "Bật PreEdit"
 
-#: src/scim_unikey_imengine.cpp:767 setup/scim_unikey_setup.cpp:250
+#: src/scim_unikey_imengine.cpp:766
 msgid ""
 "This option is best for most application\n"
 "But you may don't like it because it have an underline when typing"
@@ -112,11 +111,11 @@ msgstr ""
 "Tùy chọn này thì tốt cho hầu hết mọi ứng dụng\n"
 "Nhưng bạn có thể không thích nó, bởi vì nó có một đường gạch chân khi gõ"
 
-#: src/scim_unikey_imengine.cpp:774 setup/scim_unikey_setup.cpp:207
+#: src/scim_unikey_imengine.cpp:773
 msgid "Process W at word begin"
 msgstr "Xử lý phím W ở đầu từ"
 
-#: src/scim_unikey_imengine.cpp:776 setup/scim_unikey_setup.cpp:213
+#: src/scim_unikey_imengine.cpp:775
 msgid ""
 "If enable, type W at begin\n"
 "of word will change to Ư."
@@ -124,63 +123,113 @@ msgstr ""
 "Nếu bật, gõ W ở đầu\n"
 "của từ sẽ chuyển thành Ư."
 
-#: setup/scim_unikey_setup.cpp:104
+#: src/scim_unikey_imengine.cpp:781
+msgid "Run Setup"
+msgstr "Chạy trình cài đặt"
+
+#: setup/scim_unikey_setup.cpp:64 setup/scim_unikey_helper.cpp:36
 msgid "Unikey Setup"
 msgstr "Cài đặt Unikey"
 
-#: setup/scim_unikey_setup.cpp:137
-msgid "Unikey option"
-msgstr "Tùy chọn Unikey"
+#: setup/scim_unikey_setup.cpp:94
+msgid ""
+"This setup has been detach from scim-setup.\n"
+"Please run Setup by right click on scim tray icon,\n"
+"choose Unikey setup or click on below button."
+msgstr ""
+"Cài đặt ở đây đã được tách ra khỏi scim-setup.\n"
+"Vui lòng chạy trình cài đặt bằng cách click vào biểu tượng scim,\n"
+"sau đó chọn Chạy trình cài đặt hoặc click vào nút bên dưới."
 
-#: setup/scim_unikey_setup.cpp:177
-msgid "Macro option"
-msgstr "Tùy chọn gõ tắt"
+#: setup/scim_unikey_setup.cpp:102
+msgid "_Run setup"
+msgstr "Chạy trình cài đặt"
 
-#: setup/scim_unikey_setup.cpp:190
-msgid "Macro Table"
-msgstr "Bảng gõ tắt"
+#: setup/scim_unikey_helper.cpp:38
+msgid "Launch a GUI program to setup Unikey"
+msgstr "Chạy chương trình để cài đặt Unikey"
 
-#: setup/scim_unikey_setup.cpp:196
-msgid "Edit the macro table for Macro function"
-msgstr "Soạn thảo bảng gõ tắt cho chức năng gõ tắt"
+#: setup/setup-main.glade:58
+msgid "Input method:"
+msgstr "Kiểu gõ: "
 
-#: setup/scim_unikey_setup.cpp:200
-msgid "Telex option"
-msgstr "Tùy chọn cho Telex"
+#: setup/setup-main.glade:69
+msgid "Output charset: "
+msgstr "Bảng mã: "
 
-#: setup/scim_unikey_setup.cpp:217
-msgid "Typing mode"
-msgstr "Chế độ gõ"
+#: setup/setup-main.glade:119
+msgid "<b>Input/Output</b>"
+msgstr "<b>Nhập/Xuất</b>"
 
-#: setup/scim_unikey_setup.cpp:228
-msgid "Mode switch key:"
-msgstr "Phím chuyển chế độ"
+#: setup/setup-main.glade:195
+msgid "Enable _macro"
+msgstr "Bật gõ tắt"
 
-#: setup/scim_unikey_setup.cpp:244
-msgid "Preedit is default"
-msgstr "Preedit là mặc định"
+#: setup/setup-main.glade:208
+msgid "_Edit macro"
+msgstr "Sửa bảng gõ tắt"
 
-#: setup/scim_unikey_setup.cpp:401
+#: setup/setup-main.glade:226
+msgid "Process _W at word begin"
+msgstr "Sử lý phím _W ở đầu từ"
+
+#: setup/setup-main.glade:244
+msgid "<b>Options</b>"
+msgstr "<b>Tùy chọn</b>"
+
+#: setup/setup-main.glade:264 setup/setup-macro.glade:101
+msgid "gtk-ok"
+msgstr ""
+
+#: setup/setup-main.glade:278 setup/setup-macro.glade:115
+msgid "gtk-cancel"
+msgstr ""
+
+#: setup/setup-macro.glade:15
 msgid "Macro table definition"
 msgstr "Định nghĩa bảng gõ tắt"
 
-#: setup/scim_unikey_setup.cpp:429
-msgid "Word"
-msgstr "Từ"
+#: setup/setup-macro.glade:57
+msgid "gtk-delete"
+msgstr ""
 
-#: setup/scim_unikey_setup.cpp:437
-msgid "Replace with"
-msgstr "Thay thế bởi"
+#: setup/setup-macro.glade:71
+msgid "Delete _all"
+msgstr "Xóa _hết"
 
-#: setup/scim_unikey_setup.cpp:444
-msgid "Delete"
-msgstr "Xóa"
+#, fuzzy
+#~ msgid "scim-unikey Setup"
+#~ msgstr "Cài đặt Unikey"
 
-#: setup/scim_unikey_setup.cpp:449
-msgid "Delete All"
-msgstr "Xóa tất cả"
+#~ msgid "Unikey option"
+#~ msgstr "Tùy chọn Unikey"
 
-#: setup/scim_unikey_setup.cpp:601
-msgid "(replace text)"
-msgstr "(chuỗi thay thế)"
+#~ msgid "Macro option"
+#~ msgstr "Tùy chọn gõ tắt"
 
+#~ msgid "Macro Table"
+#~ msgstr "Bảng gõ tắt"
+
+#~ msgid "Edit the macro table for Macro function"
+#~ msgstr "Soạn thảo bảng gõ tắt cho chức năng gõ tắt"
+
+#~ msgid "Telex option"
+#~ msgstr "Tùy chọn cho Telex"
+
+#~ msgid "Typing mode"
+#~ msgstr "Chế độ gõ"
+
+#~ msgid "Mode switch key:"
+#~ msgstr "Phím chuyển chế độ"
+
+#~ msgid "Preedit is default"
+#~ msgstr "Preedit là mặc định"
+
+#~ msgid "Word"
+#~ msgstr "Từ"
+
+#~ msgid "Replace with"
+#~ msgstr "Thay thế bởi"
+
+#~ msgid "(replace text)"
+#~ msgstr "(chuỗi thay thế)"

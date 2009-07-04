@@ -10,7 +10,7 @@
 #if !defined (__SCIM_UNIKEY_IMENGINE_CONST_H)
 #define __SCIM_UNIKEY_IMENGINE_CONST_H
 
-#define SCIM_UNIKEY_ICON_FILENAME                       "/scim-unikey.png"
+#define SCIM_UNIKEY_ICON_MAIN                           "/scim-unikey.png"
 #define SCIM_UNIKEY_ICON_CONFIGURE                      "/scim-unikey-configure.png"
 #define SCIM_UNIKEY_ICON_CHECK                          "/scim-unikey-check.png"
 

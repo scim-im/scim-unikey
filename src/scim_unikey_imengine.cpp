@@ -134,11 +134,10 @@ WideString UnikeyFactory::get_help() const
 {
     return utf8_mbstowcs(_("This IME work best when environment variable are\n"
                            "- GTK_IM_MODULE=scim-bridge\n"
-                           "- QT_IM_MODULE=xim\n"
-                           " If you use preedit, you don't not need that\n\n"
-                           
+                           "- QT_IM_MODULE=xim\n\n"
+
                            "Some time, in some application, you \"must\"\n"
-                           "enable Preedit to type best\n\n"
+                           "enable Preedit to input properly\n\n"
 
                            "In some application, scim can't enable,\n"
                            "this is not a bug of scim-unikey.\n"
@@ -153,7 +152,7 @@ WideString UnikeyFactory::get_help() const
 }
 String UnikeyFactory::get_icon_file() const
 {
-    return String(SCIM_ICONDIR SCIM_UNIKEY_ICON_FILENAME);
+    return String(SCIM_ICONDIR SCIM_UNIKEY_ICON_MAIN);
 }
 
 IMEngineInstancePointer UnikeyFactory::create_instance(const String & encoding, int id)
@@ -777,6 +776,13 @@ PropertyList UnikeyInstance::CreatePropertyList()
                    "of word will change to Ư."));
     props.push_back(prop);
 
+    // config gui
+    prop.set_key("/Unikey/Options/RunSetup");
+    prop.set_label(_("Run Setup"));
+    prop.set_icon(SCIM_ICONDIR SCIM_UNIKEY_ICON_MAIN);
+    prop.set_tip("");
+    props.push_back(prop);
+
     return props;
 }
 
@@ -913,6 +919,12 @@ void UnikeyInstance::trigger_property(const String &property)
         change = true;
     }
 
+// run setup
+    else if (property == "/Unikey/Options/RunSetup")
+    {
+        system(LIBEXECDIR "/scim-setup-unikey &");
+    }
+
     if (change)
     {
         __config->flush();
@@ -920,3 +932,4 @@ void UnikeyInstance::trigger_property(const String &property)
         focus_in();
     }
 }
+

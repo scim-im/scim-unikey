@@ -1,7 +1,8 @@
 INCLUDES = \
 	-I$(top_srcdir)/ukengine \
 	-DSCIM_ICONDIR=\"@SCIM_ICONDIR@\" \
-	-DSCIM_UNIKEY_VERSION=\"@PACKAGE_VERSION@\"
+	-DSCIM_UNIKEY_VERSION=\"@PACKAGE_VERSION@\" \
+    -DLIBEXECDIR=\"$(libexecdir)\"
 
 imenginedir 		    = @SCIM_MODULEDIR@/IMEngine
 imengine_LTLIBRARIES 	    = unikey.la

@@ -1,12 +1,12 @@
 if SCIM_BUILD_SETUP
 
 INCLUDES = \
-	-I$(top_srcdir)/ukengine \
-	-I$(top_srcdir)/src \
-	-DSCIM_ICONDIR=\"@SCIM_ICONDIR@\" \
-	-DSCIM_UNIKEY_VERSION=\"@PACKAGE_VERSION@\" \
-	-DGLADE_DATA_DIR=\"$(pkgdatadir)/setup\" \
-	-DLOCALEDIR=\"$(localedir)\" \
+    -I$(top_srcdir)/ukengine \
+    -I$(top_srcdir)/src \
+    -DSCIM_ICONDIR=\"@SCIM_ICONDIR@\" \
+    -DSCIM_UNIKEY_VERSION=\"@PACKAGE_VERSION@\" \
+    -DGLADE_DATA_DIR=\"$(pkgdatadir)/setup\" \
+    -DLOCALEDIR=\"$(localedir)\" \
     -DLIBEXECDIR=\"$(libexecdir)\" \
     -Wall
 
@@ -35,12 +35,14 @@ scim_setup_unikey_SOURCES = \
 
 scim_setup_unikey_CXXFLAGS = \
     @SCIM_GTKUTILS_CFLAGS@ \
-    @SCIM_CFLAGS@
+    @SCIM_CFLAGS@ \
+    @GIO_CFLAGS@
 
 scim_setup_unikey_LDFLAGS = \
-	@SCIM_GTKUTILS_LIBS@ \
+    @SCIM_GTKUTILS_LIBS@ \
     @SCIM_LIBS@ \
-	$(top_builddir)/ukengine/libunikey-scim.la
+    @GIO_LIBS@ \
+    $(top_builddir)/ukengine/libunikey-scim.la
 
 
 # helper module: for launch setup

@@ -1,3 +1,4 @@
+#include <gio/gio.h>
 #include <gtk/gtk.h>
 
 #include "dlg_macro_table.h"
@@ -197,7 +198,7 @@ void macro_edit_button_cb(GtkButton* btn, gpointer user_data)
         GFile* f = g_file_get_parent(g_file_new_for_path(macrofile));
         if (g_file_query_exists(f, NULL) == FALSE)
         {
-            g_file_make_directory_with_parents(f, NULL, NULL);
+            g_file_make_directory(f, NULL, NULL);
         }
         g_object_unref(f);
 

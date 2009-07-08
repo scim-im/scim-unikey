@@ -12,6 +12,8 @@ typedef struct
     gboolean enableMacro;
     gboolean processwatbegin;
 
+    gboolean enablepreedit;
+
     gchar* macrofile;
 } UnikeyMainSetupOptions;
 

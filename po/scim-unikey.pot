@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: scim-unikey 0.3~r32\n"
 "Report-Msgid-Bugs-To: mr.lequoctuan@gmail.com\n"
-"POT-Creation-Date: 2009-07-04 10:59+0700\n"
+"POT-Creation-Date: 2009-07-08 22:47+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -83,7 +83,7 @@ msgstr ""
 msgid "Enable Macro"
 msgstr ""
 
-#: src/scim_unikey_imengine.cpp:764
+#: src/scim_unikey_imengine.cpp:764 setup/setup-main.glade:239
 msgid "Enable PreEdit"
 msgstr ""
 
@@ -150,15 +150,15 @@ msgstr ""
 msgid "Process _W at word begin"
 msgstr ""
 
-#: setup/setup-main.glade:244
+#: setup/setup-main.glade:256
 msgid "<b>Options</b>"
 msgstr ""
 
-#: setup/setup-main.glade:264 setup/setup-macro.glade:101
+#: setup/setup-main.glade:276 setup/setup-macro.glade:101
 msgid "gtk-ok"
 msgstr ""
 
-#: setup/setup-main.glade:278 setup/setup-macro.glade:115
+#: setup/setup-main.glade:290 setup/setup-macro.glade:115
 msgid "gtk-cancel"
 msgstr ""
 

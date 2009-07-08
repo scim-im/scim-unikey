@@ -7,7 +7,7 @@ cflags_set=${CFLAGS+set}
 cppflags_set=${CPPFLAGS+set}
 
 # Init automake stuff
-AM_INIT_AUTOMAKE([dist-bzip2])
+AM_INIT_AUTOMAKE
 AM_CONFIG_HEADER([config.h])
 AC_CONFIG_SRCDIR([src/scim_unikey_imengine.h])
 AM_PROG_INSTALL_STRIP
@@ -16,8 +16,7 @@ AM_GNU_GETTEXT([external])
 AM_GNU_GETTEXT_VERSION(0.17)
 
 # Init libtool
-LT_INIT
-AC_DISABLE_STATIC
+LT_INIT(disable-static)
 AC_PROG_LIBTOOL
 
 # Checks for programs.

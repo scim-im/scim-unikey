@@ -22,6 +22,7 @@ int main(int argc, char** argv)
     gtk_window_set_default_icon_from_file(SCIM_ICONDIR SCIM_UNIKEY_ICON_MAIN, NULL);
 
     GtkWidget* main_dlg = unikey_main_setup_dialog_new(); // create main dlg
+    gtk_window_set_title(GTK_WINDOW(main_dlg), "Scim-Unikey setup v" PACKAGE_VERSION);
 
     gtk_signal_connect(GTK_OBJECT(main_dlg), "destroy", gtk_main_quit, NULL); // connect with signal
 

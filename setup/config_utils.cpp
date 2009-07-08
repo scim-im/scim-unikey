@@ -22,6 +22,7 @@ void set_default_config(UnikeyMainSetupOptions* opt)
     opt->enableMacro = SCIM_IMENGINE_UNIKEY_MACROENABLED_DEF;
 
     opt->processwatbegin = SCIM_IMENGINE_UNIKEY_PROCESSWATWORDBEGIN_DEF;
+    opt->enablepreedit = SCIM_IMENGINE_UNIKEY_PREEDIT_DEF;
 
     opt->macrofile = get_macro_file();
 }
@@ -96,6 +97,14 @@ void read_config(UnikeyMainSetupOptions* opt)
         opt->processwatbegin = t;
     }
     // END get ProcessWAtBegin
+
+    // get EnablePreedit
+    b = scim_get_config(SCIM_IMENGINE_UNIKEY_PREEDIT, G_TYPE_BOOLEAN, &t);
+    if (b == TRUE)
+    {
+        opt->enablepreedit = t;
+    }
+    // END get EnablePreedit
 }
 
 void write_config(UnikeyMainSetupOptions* opt)
@@ -108,6 +117,7 @@ void write_config(UnikeyMainSetupOptions* opt)
     scim_set_config(SCIM_IMENGINE_UNIKEY_FREEMARKING, G_TYPE_BOOLEAN, &opt->freeMarking);
     scim_set_config(SCIM_IMENGINE_UNIKEY_MACROENABLED, G_TYPE_BOOLEAN, &opt->enableMacro);
     scim_set_config(SCIM_IMENGINE_UNIKEY_PROCESSWATWORDBEGIN, G_TYPE_BOOLEAN, &opt->processwatbegin);
+    scim_set_config(SCIM_IMENGINE_UNIKEY_PREEDIT, G_TYPE_BOOLEAN, &opt->enablepreedit);
 }
 
 int force_engine_to_reload_config()

@@ -2,6 +2,7 @@
 src/scim_unikey_imengine.cpp
 setup/scim_unikey_setup.cpp
 setup/scim_unikey_helper.cpp
+setup/dlg_macro_table.cpp
 setup/setup-main.glade
 setup/setup-macro.glade
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: scim-unikey\n"
 "Report-Msgid-Bugs-To: mr.lequoctuan@gmail.com\n"
-"POT-Creation-Date: 2009-07-08 22:47+0700\n"
+"POT-Creation-Date: 2009-07-08 22:56+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Le Quoc Tuan <mr.lequoctuan@gmail.com>\n"
 "Language-Team: Le Quoc Tuan <mr.lequoctuan@gmail.com>\n"
@@ -124,8 +124,8 @@ msgstr ""
 "của từ sẽ chuyển thành Ư."
 
 #: src/scim_unikey_imengine.cpp:781
-msgid "Run Setup"
-msgstr "Chạy trình cài đặt"
+msgid "Launch Unikey-setup"
+msgstr "Chạy trình cài đặt Unikey"
 
 #: setup/scim_unikey_setup.cpp:64 setup/scim_unikey_helper.cpp:36
 msgid "Unikey Setup"
@@ -148,6 +148,18 @@ msgstr "Chạy trình cài đặt"
 #: setup/scim_unikey_helper.cpp:38
 msgid "Launch a GUI program to setup Unikey"
 msgstr "Chạy chương trình để cài đặt Unikey"
+
+#: setup/dlg_macro_table.cpp:13
+msgid "(replace text)"
+msgstr "(chuỗi thay thế)"
+
+#: setup/dlg_macro_table.cpp:55
+msgid "Word"
+msgstr "Từ"
+
+#: setup/dlg_macro_table.cpp:69
+msgid "Replace with"
+msgstr "Thay thế với"
 
 #: setup/setup-main.glade:58
 msgid "Input method:"
@@ -196,40 +208,3 @@ msgstr ""
 #: setup/setup-macro.glade:71
 msgid "Delete _all"
 msgstr "Xóa _hết"
-
-#, fuzzy
-#~ msgid "scim-unikey Setup"
-#~ msgstr "Cài đặt Unikey"
-
-#~ msgid "Unikey option"
-#~ msgstr "Tùy chọn Unikey"
-
-#~ msgid "Macro option"
-#~ msgstr "Tùy chọn gõ tắt"
-
-#~ msgid "Macro Table"
-#~ msgstr "Bảng gõ tắt"
-
-#~ msgid "Edit the macro table for Macro function"
-#~ msgstr "Soạn thảo bảng gõ tắt cho chức năng gõ tắt"
-
-#~ msgid "Telex option"
-#~ msgstr "Tùy chọn cho Telex"
-
-#~ msgid "Typing mode"
-#~ msgstr "Chế độ gõ"
-
-#~ msgid "Mode switch key:"
-#~ msgstr "Phím chuyển chế độ"
-
-#~ msgid "Preedit is default"
-#~ msgstr "Preedit là mặc định"
-
-#~ msgid "Word"
-#~ msgstr "Từ"
-
-#~ msgid "Replace with"
-#~ msgstr "Thay thế bởi"
-
-#~ msgid "(replace text)"
-#~ msgstr "(chuỗi thay thế)"

@@ -1,5 +1,5 @@
 --- orginal/mactab.cpp	2009-04-14 00:16:33.000000000 +0700
-+++ mactab.cpp	2009-06-12 10:45:07.000000000 +0700
++++ mactab.cpp	2009-06-19 12:03:47.000000000 +0700
 @@ -20,7 +20,7 @@
   * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
   * Boston, MA 02111-1307, USA.

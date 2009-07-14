@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: scim-unikey 0.3~r32\n"
 "Report-Msgid-Bugs-To: mr.lequoctuan@gmail.com\n"
-"POT-Creation-Date: 2009-07-08 22:56+0700\n"
+"POT-Creation-Date: 2009-07-14 22:57+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,7 +53,7 @@ msgstr ""
 msgid "Configure Unikey here"
 msgstr ""
 
-#: src/scim_unikey_imengine.cpp:724 setup/setup-main.glade:144
+#: src/scim_unikey_imengine.cpp:724 setup/setup-main.glade:146
 msgid "Enable spell check"
 msgstr ""
 
@@ -61,7 +61,7 @@ msgstr ""
 msgid "If enable, you can decrease mistake when typing"
 msgstr ""
 
-#: src/scim_unikey_imengine.cpp:732 setup/setup-main.glade:156
+#: src/scim_unikey_imengine.cpp:732 setup/setup-main.glade:158
 msgid "Auto restore keys with invalid words"
 msgstr ""
 
@@ -71,11 +71,11 @@ msgid ""
 "it will auto restore keystroke into original"
 msgstr ""
 
-#: src/scim_unikey_imengine.cpp:741 setup/setup-main.glade:168
+#: src/scim_unikey_imengine.cpp:741 setup/setup-main.glade:170
 msgid "Use oà, uý (instead of òa, úy)"
 msgstr ""
 
-#: src/scim_unikey_imengine.cpp:749 setup/setup-main.glade:180
+#: src/scim_unikey_imengine.cpp:749 setup/setup-main.glade:182
 msgid "Allow type with more freedom"
 msgstr ""
 
@@ -83,7 +83,7 @@ msgstr ""
 msgid "Enable Macro"
 msgstr ""
 
-#: src/scim_unikey_imengine.cpp:764 setup/setup-main.glade:239
+#: src/scim_unikey_imengine.cpp:764 setup/setup-main.glade:242
 msgid "Enable PreEdit"
 msgstr ""
 
@@ -138,40 +138,32 @@ msgstr ""
 msgid "Replace with"
 msgstr ""
 
-#: setup/setup-main.glade:58
+#: setup/setup-main.glade:59
 msgid "Input method:"
 msgstr ""
 
-#: setup/setup-main.glade:69
+#: setup/setup-main.glade:70
 msgid "Output charset: "
 msgstr ""
 
-#: setup/setup-main.glade:119
+#: setup/setup-main.glade:121
 msgid "<b>Input/Output</b>"
 msgstr ""
 
-#: setup/setup-main.glade:195
+#: setup/setup-main.glade:197
 msgid "Enable _macro"
 msgstr ""
 
-#: setup/setup-main.glade:208
+#: setup/setup-main.glade:210
 msgid "_Edit macro"
 msgstr ""
 
-#: setup/setup-main.glade:226
+#: setup/setup-main.glade:229
 msgid "Process _W at word begin"
 msgstr ""
 
-#: setup/setup-main.glade:256
+#: setup/setup-main.glade:259
 msgid "<b>Options</b>"
-msgstr ""
-
-#: setup/setup-main.glade:276 setup/setup-macro.glade:101
-msgid "gtk-ok"
-msgstr ""
-
-#: setup/setup-main.glade:290 setup/setup-macro.glade:115
-msgid "gtk-cancel"
 msgstr ""
 
 #: setup/setup-macro.glade:15
@@ -184,4 +176,12 @@ msgstr ""
 
 #: setup/setup-macro.glade:71
 msgid "Delete _all"
+msgstr ""
+
+#: setup/setup-macro.glade:101
+msgid "gtk-ok"
+msgstr ""
+
+#: setup/setup-macro.glade:115
+msgid "gtk-cancel"
 msgstr ""

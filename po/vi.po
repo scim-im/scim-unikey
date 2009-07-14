@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: scim-unikey\n"
 "Report-Msgid-Bugs-To: mr.lequoctuan@gmail.com\n"
-"POT-Creation-Date: 2009-07-08 22:56+0700\n"
+"POT-Creation-Date: 2009-07-14 22:57+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Le Quoc Tuan <mr.lequoctuan@gmail.com>\n"
 "Language-Team: Le Quoc Tuan <mr.lequoctuan@gmail.com>\n"
@@ -67,7 +67,7 @@ msgstr "Tùy chọn"
 msgid "Configure Unikey here"
 msgstr "Cấu hình Unikey ở đây"
 
-#: src/scim_unikey_imengine.cpp:724 setup/setup-main.glade:144
+#: src/scim_unikey_imengine.cpp:724 setup/setup-main.glade:146
 msgid "Enable spell check"
 msgstr "Bật kiểm tra chính tả"
 
@@ -75,7 +75,7 @@ msgstr "Bật kiểm tra chính tả"
 msgid "If enable, you can decrease mistake when typing"
 msgstr "Nếu bật, bạn có thể giảm lỗi chính tả khi gõ"
 
-#: src/scim_unikey_imengine.cpp:732 setup/setup-main.glade:156
+#: src/scim_unikey_imengine.cpp:732 setup/setup-main.glade:158
 msgid "Auto restore keys with invalid words"
 msgstr "Tự động khôi phục phím với từ sai"
 
@@ -87,11 +87,11 @@ msgstr ""
 "Khi gõ một từ không phải tiếng Việt,\n"
 "nó sẽ tự động khôi phục phím gốc"
 
-#: src/scim_unikey_imengine.cpp:741 setup/setup-main.glade:168
+#: src/scim_unikey_imengine.cpp:741 setup/setup-main.glade:170
 msgid "Use oà, uý (instead of òa, úy)"
 msgstr "Đặt dấu oà, uý (thay vì òa, úy)"
 
-#: src/scim_unikey_imengine.cpp:749 setup/setup-main.glade:180
+#: src/scim_unikey_imengine.cpp:749 setup/setup-main.glade:182
 msgid "Allow type with more freedom"
 msgstr "Cho phép gõ tự do"
 
@@ -99,7 +99,7 @@ msgstr "Cho phép gõ tự do"
 msgid "Enable Macro"
 msgstr "Cho phép gõ tắt"
 
-#: src/scim_unikey_imengine.cpp:764 setup/setup-main.glade:239
+#: src/scim_unikey_imengine.cpp:764 setup/setup-main.glade:242
 msgid "Enable PreEdit"
 msgstr "Bật PreEdit"
 
@@ -161,41 +161,33 @@ msgstr "Từ"
 msgid "Replace with"
 msgstr "Thay thế với"
 
-#: setup/setup-main.glade:58
+#: setup/setup-main.glade:59
 msgid "Input method:"
 msgstr "Kiểu gõ: "
 
-#: setup/setup-main.glade:69
+#: setup/setup-main.glade:70
 msgid "Output charset: "
 msgstr "Bảng mã: "
 
-#: setup/setup-main.glade:119
+#: setup/setup-main.glade:121
 msgid "<b>Input/Output</b>"
 msgstr "<b>Nhập/Xuất</b>"
 
-#: setup/setup-main.glade:195
+#: setup/setup-main.glade:197
 msgid "Enable _macro"
 msgstr "Bật gõ tắt"
 
-#: setup/setup-main.glade:208
+#: setup/setup-main.glade:210
 msgid "_Edit macro"
 msgstr "Sửa bảng gõ tắt"
 
-#: setup/setup-main.glade:226
+#: setup/setup-main.glade:229
 msgid "Process _W at word begin"
 msgstr "Sử lý phím _W ở đầu từ"
 
-#: setup/setup-main.glade:256
+#: setup/setup-main.glade:259
 msgid "<b>Options</b>"
 msgstr "<b>Tùy chọn</b>"
-
-#: setup/setup-main.glade:276 setup/setup-macro.glade:101
-msgid "gtk-ok"
-msgstr ""
-
-#: setup/setup-main.glade:290 setup/setup-macro.glade:115
-msgid "gtk-cancel"
-msgstr ""
 
 #: setup/setup-macro.glade:15
 msgid "Macro table definition"
@@ -208,3 +200,11 @@ msgstr ""
 #: setup/setup-macro.glade:71
 msgid "Delete _all"
 msgstr "Xóa _hết"
+
+#: setup/setup-macro.glade:101
+msgid "gtk-ok"
+msgstr ""
+
+#: setup/setup-macro.glade:115
+msgid "gtk-cancel"
+msgstr ""

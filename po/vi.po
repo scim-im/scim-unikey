@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: scim-unikey\n"
 "Report-Msgid-Bugs-To: mr.lequoctuan@gmail.com\n"
-"POT-Creation-Date: 2009-07-14 22:57+0700\n"
+"POT-Creation-Date: 2009-07-31 14:48+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Le Quoc Tuan <mr.lequoctuan@gmail.com>\n"
 "Language-Team: Le Quoc Tuan <mr.lequoctuan@gmail.com>\n"
@@ -13,14 +13,14 @@ msgstr ""
 "X-Poedit-Country: VIET NAM\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: src/scim_unikey_imengine.cpp:135
+#: src/im_engine.cpp:96
 msgid ""
 "This IME work best when environment variable are\n"
 "- GTK_IM_MODULE=scim-bridge\n"
 "- QT_IM_MODULE=xim\n"
 "\n"
 "Some time, in some application, you \"must\"\n"
-"enable Preedit to input properly\n"
+"use Preedit to input properly\n"
 "\n"
 "In some application, scim can't enable,\n"
 "this is not a bug of scim-unikey.\n"
@@ -31,14 +31,14 @@ msgid ""
 "use this combine with scim-m17n\n"
 "\n"
 "For other support goto:\n"
-"  http://forum.ubuntu-vn.org/viewforum.php?f=85"
+"  http://code.google.com/p/scim-unikey/wiki/Support"
 msgstr ""
 "IME này hoạt động tốt nhất khi giá trị biến môi trường là\n"
 "- GTK_IM_MODULE=scim-bridge\n"
 "- QT_IM_MODULE=xim\n"
 "\n"
 "Thỉnh thoảng, trong một vài ứng dụng, bạn \"phải\"\n"
-"bật chức năng Preedit để có thể gõ được chính xác\n"
+"dùng Preedit để có thể gõ được chính xác\n"
 "\n"
 "Trong vài ứng dụng, scim không thể bật,\n"
 "đây không phải là bug của scim-unikey.\n"
@@ -49,37 +49,37 @@ msgstr ""
 "dùng kết hợp với scim-m17n\n"
 "\n"
 "Để nhận được sự hỗ trợ hãy ghé thăm:\n"
-"  http://forum.ubuntu-vn.org/viewforum.php?f=85"
+"  http://code.google.com/p/scim-unikey/wiki/Support"
 
-#: src/scim_unikey_imengine.cpp:684
+#: src/unikey_instance.cpp:142
 msgid "Choose input method"
 msgstr "Chọn kiểu gõ"
 
-#: src/scim_unikey_imengine.cpp:701
+#: src/unikey_instance.cpp:159
 msgid "Choose output charset"
 msgstr "Chọn bảng mã"
 
-#: src/scim_unikey_imengine.cpp:716
+#: src/unikey_instance.cpp:174
 msgid "Options"
 msgstr "Tùy chọn"
 
-#: src/scim_unikey_imengine.cpp:718
+#: src/unikey_instance.cpp:176
 msgid "Configure Unikey here"
 msgstr "Cấu hình Unikey ở đây"
 
-#: src/scim_unikey_imengine.cpp:724 setup/setup-main.glade:146
+#: src/unikey_instance.cpp:182 setup/setup-main.glade:146
 msgid "Enable spell check"
 msgstr "Bật kiểm tra chính tả"
 
-#: src/scim_unikey_imengine.cpp:726
+#: src/unikey_instance.cpp:184
 msgid "If enable, you can decrease mistake when typing"
 msgstr "Nếu bật, bạn có thể giảm lỗi chính tả khi gõ"
 
-#: src/scim_unikey_imengine.cpp:732 setup/setup-main.glade:158
+#: src/unikey_instance.cpp:190 setup/setup-main.glade:158
 msgid "Auto restore keys with invalid words"
 msgstr "Tự động khôi phục phím với từ sai"
 
-#: src/scim_unikey_imengine.cpp:734
+#: src/unikey_instance.cpp:192
 msgid ""
 "When typing a word not in Vietnamese,\n"
 "it will auto restore keystroke into original"
@@ -87,35 +87,23 @@ msgstr ""
 "Khi gõ một từ không phải tiếng Việt,\n"
 "nó sẽ tự động khôi phục phím gốc"
 
-#: src/scim_unikey_imengine.cpp:741 setup/setup-main.glade:170
+#: src/unikey_instance.cpp:199 setup/setup-main.glade:170
 msgid "Use oà, uý (instead of òa, úy)"
 msgstr "Đặt dấu oà, uý (thay vì òa, úy)"
 
-#: src/scim_unikey_imengine.cpp:749 setup/setup-main.glade:182
+#: src/unikey_instance.cpp:207 setup/setup-main.glade:182
 msgid "Allow type with more freedom"
 msgstr "Cho phép gõ tự do"
 
-#: src/scim_unikey_imengine.cpp:757
+#: src/unikey_instance.cpp:215
 msgid "Enable Macro"
 msgstr "Cho phép gõ tắt"
 
-#: src/scim_unikey_imengine.cpp:764 setup/setup-main.glade:242
-msgid "Enable PreEdit"
-msgstr "Bật PreEdit"
-
-#: src/scim_unikey_imengine.cpp:766
-msgid ""
-"This option is best for most application\n"
-"But you may don't like it because it have an underline when typing"
-msgstr ""
-"Tùy chọn này thì tốt cho hầu hết mọi ứng dụng\n"
-"Nhưng bạn có thể không thích nó, bởi vì nó có một đường gạch chân khi gõ"
-
-#: src/scim_unikey_imengine.cpp:773
+#: src/unikey_instance.cpp:223
 msgid "Process W at word begin"
 msgstr "Xử lý phím W ở đầu từ"
 
-#: src/scim_unikey_imengine.cpp:775
+#: src/unikey_instance.cpp:225
 msgid ""
 "If enable, type W at begin\n"
 "of word will change to Ư."
@@ -123,7 +111,7 @@ msgstr ""
 "Nếu bật, gõ W ở đầu\n"
 "của từ sẽ chuyển thành Ư."
 
-#: src/scim_unikey_imengine.cpp:781
+#: src/unikey_instance.cpp:231
 msgid "Launch Unikey-setup"
 msgstr "Chạy trình cài đặt Unikey"
 
@@ -185,7 +173,7 @@ msgstr "Sửa bảng gõ tắt"
 msgid "Process _W at word begin"
 msgstr "Sử lý phím _W ở đầu từ"
 
-#: setup/setup-main.glade:259
+#: setup/setup-main.glade:247
 msgid "<b>Options</b>"
 msgstr "<b>Tùy chọn</b>"
 

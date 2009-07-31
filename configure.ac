@@ -9,7 +9,7 @@ cppflags_set=${CPPFLAGS+set}
 # Init automake stuff
 AM_INIT_AUTOMAKE
 AM_CONFIG_HEADER([config.h])
-AC_CONFIG_SRCDIR([src/scim_unikey_imengine.h])
+AC_CONFIG_SRCDIR([src/scim_unikey_const.h])
 AM_PROG_INSTALL_STRIP
 
 AM_GNU_GETTEXT([external])

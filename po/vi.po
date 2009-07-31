@@ -195,7 +195,7 @@ msgstr "Định nghĩa bảng gõ tắt"
 
 #: setup/setup-macro.glade:57
 msgid "gtk-delete"
-msgstr ""
+msgstr "gtk-delete"
 
 #: setup/setup-macro.glade:71
 msgid "Delete _all"
@@ -203,8 +203,8 @@ msgstr "Xóa _hết"
 
 #: setup/setup-macro.glade:101
 msgid "gtk-ok"
-msgstr ""
+msgstr "gtk-ok"
 
 #: setup/setup-macro.glade:115
 msgid "gtk-cancel"
-msgstr ""
+msgstr "gtk-cancel"

@@ -17,8 +17,6 @@
 #define SCIM_IMENGINE_UNIKEY_MACROPATH                  "/.scim/scim-unikey/macro"
 
 /** define the config string off the unikey engine */
-#define SCIM_IMENGINE_UNIKEY_PREEDIT                    "/IMEngine/Unikey/preEdit"
-#define SCIM_IMENGINE_UNIKEY_PREEDIT_SWITCH_KEY         "/IMEngine/Unikey/preEditSwitchKey"
 #define SCIM_IMENGINE_UNIKEY_PROCESSWATWORDBEGIN        "/IMEngine/Unikey/processWAtBeginWord"
 
 #define SCIM_IMENGINE_UNIKEY_FREEMARKING                "/IMEngine/Unikey/freeMarking"
@@ -33,8 +31,6 @@
 /** define the default value off the unikey engine */
 #define SCIM_IMENGINE_UNIKEY_PROCESSWATWORDBEGIN_DEF    true
 
-#define SCIM_IMENGINE_UNIKEY_PREEDIT_DEF                true
-#define SCIM_IMENGINE_UNIKEY_PREEDIT_SWITCH_KEY_DEF     "Control+Alt+backslash"
 #define SCIM_IMENGINE_UNIKEY_FREEMARKING_DEF            true
 #define SCIM_IMENGINE_UNIKEY_MODERNSTYLE_DEF            false
 #define SCIM_IMENGINE_UNIKEY_MACROENABLED_DEF           false

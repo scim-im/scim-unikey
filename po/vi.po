@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: scim-unikey\n"
 "Report-Msgid-Bugs-To: mr.lequoctuan@gmail.com\n"
-"POT-Creation-Date: 2009-07-31 14:48+0700\n"
+"POT-Creation-Date: 2009-08-05 10:36+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Le Quoc Tuan <mr.lequoctuan@gmail.com>\n"
 "Language-Team: Le Quoc Tuan <mr.lequoctuan@gmail.com>\n"
@@ -67,7 +67,8 @@ msgstr "Tùy chọn"
 msgid "Configure Unikey here"
 msgstr "Cấu hình Unikey ở đây"
 
-#: src/unikey_instance.cpp:182 setup/setup-main.glade:146
+#: src/unikey_instance.cpp:182
+#: setup/setup-main.glade:146
 msgid "Enable spell check"
 msgstr "Bật kiểm tra chính tả"
 
@@ -75,7 +76,8 @@ msgstr "Bật kiểm tra chính tả"
 msgid "If enable, you can decrease mistake when typing"
 msgstr "Nếu bật, bạn có thể giảm lỗi chính tả khi gõ"
 
-#: src/unikey_instance.cpp:190 setup/setup-main.glade:158
+#: src/unikey_instance.cpp:190
+#: setup/setup-main.glade:158
 msgid "Auto restore keys with invalid words"
 msgstr "Tự động khôi phục phím với từ sai"
 
@@ -87,11 +89,13 @@ msgstr ""
 "Khi gõ một từ không phải tiếng Việt,\n"
 "nó sẽ tự động khôi phục phím gốc"
 
-#: src/unikey_instance.cpp:199 setup/setup-main.glade:170
+#: src/unikey_instance.cpp:199
+#: setup/setup-main.glade:170
 msgid "Use oà, uý (instead of òa, úy)"
 msgstr "Đặt dấu oà, uý (thay vì òa, úy)"
 
-#: src/unikey_instance.cpp:207 setup/setup-main.glade:182
+#: src/unikey_instance.cpp:207
+#: setup/setup-main.glade:182
 msgid "Allow type with more freedom"
 msgstr "Cho phép gõ tự do"
 
@@ -115,7 +119,8 @@ msgstr ""
 msgid "Launch Unikey-setup"
 msgstr "Chạy trình cài đặt Unikey"
 
-#: setup/scim_unikey_setup.cpp:64 setup/scim_unikey_helper.cpp:36
+#: setup/scim_unikey_setup.cpp:64
+#: setup/scim_unikey_helper.cpp:36
 msgid "Unikey Setup"
 msgstr "Cài đặt Unikey"
 
@@ -141,13 +146,21 @@ msgstr "Chạy chương trình để cài đặt Unikey"
 msgid "(replace text)"
 msgstr "(chuỗi thay thế)"
 
-#: setup/dlg_macro_table.cpp:55
+#: setup/dlg_macro_table.cpp:57
 msgid "Word"
 msgstr "Từ"
 
-#: setup/dlg_macro_table.cpp:69
+#: setup/dlg_macro_table.cpp:71
 msgid "Replace with"
 msgstr "Thay thế với"
+
+#: setup/dlg_macro_table.cpp:374
+msgid "Choose file to import"
+msgstr "Chọn tập tin để nhập"
+
+#: setup/dlg_macro_table.cpp:424
+msgid "Choose file to export"
+msgstr "Chọn tập tin để xuất"
 
 #: setup/setup-main.glade:59
 msgid "Input method:"
@@ -181,18 +194,22 @@ msgstr "<b>Tùy chọn</b>"
 msgid "Macro table definition"
 msgstr "Định nghĩa bảng gõ tắt"
 
-#: setup/setup-macro.glade:57
-msgid "gtk-delete"
-msgstr "gtk-delete"
-
 #: setup/setup-macro.glade:71
 msgid "Delete _all"
 msgstr "Xóa _hết"
 
-#: setup/setup-macro.glade:101
-msgid "gtk-ok"
-msgstr "gtk-ok"
+#: setup/setup-macro.glade:95
+msgid "_Import..."
+msgstr "_Nhập..."
 
-#: setup/setup-macro.glade:115
-msgid "gtk-cancel"
-msgstr "gtk-cancel"
+#: setup/setup-macro.glade:109
+msgid "_Export..."
+msgstr "_Xuất..."
+
+#~ msgid "gtk-delete"
+#~ msgstr "gtk-delete"
+#~ msgid "gtk-ok"
+#~ msgstr "gtk-ok"
+#~ msgid "gtk-cancel"
+#~ msgstr "gtk-cancel"
+

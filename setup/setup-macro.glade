@@ -134,8 +134,8 @@
             <property name="visible">True</property>
             <property name="layout_style">end</property>
             <child>
-              <object class="GtkButton" id="btn_ok">
-                <property name="label">gtk-ok</property>
+              <object class="GtkButton" id="btn_cancel">
+                <property name="label">gtk-cancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -148,8 +148,8 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton" id="btn_cancel">
-                <property name="label">gtk-cancel</property>
+              <object class="GtkButton" id="btn_ok">
+                <property name="label">gtk-ok</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -171,8 +171,8 @@
       </object>
     </child>
     <action-widgets>
-      <action-widget response="-5">btn_ok</action-widget>
       <action-widget response="-6">btn_cancel</action-widget>
+      <action-widget response="-5">btn_ok</action-widget>
     </action-widgets>
   </object>
   <object class="GtkImage" id="img_remove">

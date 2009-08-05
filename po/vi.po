@@ -67,8 +67,7 @@ msgstr "Tùy chọn"
 msgid "Configure Unikey here"
 msgstr "Cấu hình Unikey ở đây"
 
-#: src/unikey_instance.cpp:182
-#: setup/setup-main.glade:146
+#: src/unikey_instance.cpp:182 setup/setup-main.glade:146
 msgid "Enable spell check"
 msgstr "Bật kiểm tra chính tả"
 
@@ -76,8 +75,7 @@ msgstr "Bật kiểm tra chính tả"
 msgid "If enable, you can decrease mistake when typing"
 msgstr "Nếu bật, bạn có thể giảm lỗi chính tả khi gõ"
 
-#: src/unikey_instance.cpp:190
-#: setup/setup-main.glade:158
+#: src/unikey_instance.cpp:190 setup/setup-main.glade:158
 msgid "Auto restore keys with invalid words"
 msgstr "Tự động khôi phục phím với từ sai"
 
@@ -89,13 +87,11 @@ msgstr ""
 "Khi gõ một từ không phải tiếng Việt,\n"
 "nó sẽ tự động khôi phục phím gốc"
 
-#: src/unikey_instance.cpp:199
-#: setup/setup-main.glade:170
+#: src/unikey_instance.cpp:199 setup/setup-main.glade:170
 msgid "Use oà, uý (instead of òa, úy)"
 msgstr "Đặt dấu oà, uý (thay vì òa, úy)"
 
-#: src/unikey_instance.cpp:207
-#: setup/setup-main.glade:182
+#: src/unikey_instance.cpp:207 setup/setup-main.glade:182
 msgid "Allow type with more freedom"
 msgstr "Cho phép gõ tự do"
 
@@ -119,8 +115,7 @@ msgstr ""
 msgid "Launch Unikey-setup"
 msgstr "Chạy trình cài đặt Unikey"
 
-#: setup/scim_unikey_setup.cpp:64
-#: setup/scim_unikey_helper.cpp:36
+#: setup/scim_unikey_setup.cpp:64 setup/scim_unikey_helper.cpp:36
 msgid "Unikey Setup"
 msgstr "Cài đặt Unikey"
 
@@ -205,11 +200,3 @@ msgstr "_Nhập..."
 #: setup/setup-macro.glade:109
 msgid "_Export..."
 msgstr "_Xuất..."
-
-#~ msgid "gtk-delete"
-#~ msgstr "gtk-delete"
-#~ msgid "gtk-ok"
-#~ msgstr "gtk-ok"
-#~ msgid "gtk-cancel"
-#~ msgstr "gtk-cancel"
-

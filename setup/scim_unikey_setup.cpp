@@ -91,7 +91,7 @@ static GtkWidget* create_setup_window()
         window = gtk_vbox_new(TRUE, 0);
 
         GtkWidget* label = gtk_label_new(_(
-                "This setup has been detach from scim-setup.\n"
+                "This setup has been detached from scim-setup.\n"
                 "Please run Setup by right click on scim tray icon,\n"
                 "choose Unikey setup or click on below button."));
 

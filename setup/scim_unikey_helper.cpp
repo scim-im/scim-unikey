@@ -35,7 +35,7 @@ using namespace scim;
 static HelperInfo __helper_info (String("d64561de-c638-427e-9f9c-dd84e15043ab"),
 								 String(_("Unikey Setup")),
 								 String(SCIM_ICONDIR)+String(SCIM_UNIKEY_ICON_MAIN),
-								 String(_("Launch a GUI program to setup Unikey")),
+								 String(""),
 								 SCIM_HELPER_STAND_ALONE);
 
 extern "C"

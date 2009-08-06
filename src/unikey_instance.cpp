@@ -228,7 +228,7 @@ PropertyList UnikeyInstance::CreatePropertyList()
 
     // config gui
     prop.set_key("/Unikey/Options/RunSetup");
-    prop.set_label(_("Launch Unikey-setup"));
+    prop.set_label(_("Launch Unikey Setup"));
     prop.set_icon(SCIM_ICONDIR SCIM_UNIKEY_ICON_MAIN);
     prop.set_tip("");
     props.push_back(prop);

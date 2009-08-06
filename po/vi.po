@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: scim-unikey\n"
 "Report-Msgid-Bugs-To: mr.lequoctuan@gmail.com\n"
-"POT-Creation-Date: 2009-08-05 10:47+0700\n"
+"POT-Creation-Date: 2009-08-06 11:08+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Le Quoc Tuan <mr.lequoctuan@gmail.com>\n"
 "Language-Team: Le Quoc Tuan <mr.lequoctuan@gmail.com>\n"
@@ -112,7 +112,7 @@ msgstr ""
 "của từ sẽ chuyển thành Ư."
 
 #: src/unikey_instance.cpp:231
-msgid "Launch Unikey-setup"
+msgid "Launch Unikey Setup"
 msgstr "Chạy trình cài đặt Unikey"
 
 #: setup/scim_unikey_setup.cpp:64 setup/scim_unikey_helper.cpp:36
@@ -132,10 +132,6 @@ msgstr ""
 #: setup/scim_unikey_setup.cpp:102
 msgid "_Run setup"
 msgstr "Chạy trình cài đặt"
-
-#: setup/scim_unikey_helper.cpp:38
-msgid "Launch a GUI program to setup Unikey"
-msgstr "Chạy chương trình để cài đặt Unikey"
 
 #: setup/dlg_macro_table.cpp:13
 msgid "(replace text)"

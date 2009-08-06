@@ -16,8 +16,8 @@ On Ubuntu:
     1. Install some package for build:
        sudo apt-get install build-essential libscim-dev
 
-    2. Open a Terminal, change directory to parent of scim-unikey-version.tar.bz2 and type
-       tar xvjf scim-unikey-version.tar.bz2
+    2. Open a Terminal, change directory to parent of scim-unikey-version.tar.gz and type
+       tar xvzf scim-unikey-version.tar.gz
        ./configure --prefix=/usr
        make
        sudo make install

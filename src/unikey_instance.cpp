@@ -475,7 +475,7 @@ bool UnikeyInstancePreedit::unikey_process_key_event(const KeyEvent& key)
     }
 
     if (key.is_key_release())
-        return false;
+        return true;
 
     if (key.code == SCIM_KEY_Tab
              || key.code == SCIM_KEY_Return
@@ -750,7 +750,7 @@ bool UnikeyInstanceClassic::unikey_process_key_event(const KeyEvent& key)
 {
     if (key.is_key_release())
     {
-        return false;
+        return true;
     }
 
     if (key.is_control_down() || key.mask & SCIM_KEY_AltMask)

@@ -1,7 +1,6 @@
 INCLUDES = \
     -I$(top_srcdir)/ukengine \
     -DSCIM_ICONDIR=\"@SCIM_ICONDIR@\" \
-    -DSCIM_UNIKEY_VERSION=\"@PACKAGE_VERSION@\" \
     -DLIBEXECDIR=\"$(libexecdir)\" \
     -Wall
 

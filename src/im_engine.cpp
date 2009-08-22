@@ -85,7 +85,7 @@ WideString UnikeyFactory::get_authors() const
 WideString UnikeyFactory::get_credits() const
 {
     return utf8_mbstowcs(String("Scim-Unikey Input Method\n"
-                                "Version: " SCIM_UNIKEY_VERSION "\n"
+                                "Version: " PACKAGE_VERSION "\n"
                                 "Copyright © 2008-2009 Ubuntu-VN\n"
                                 "http://www.ubuntu-vn.org\n\n"
                                 "Thanks to Pham Kim Long for ukengine")

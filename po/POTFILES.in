@@ -1,7 +1,6 @@
 # List of source files which contain translatable strings.
 src/im_engine.cpp
 src/unikey_instance.cpp
-setup/scim_unikey_setup.cpp
 setup/scim_unikey_helper.cpp
 setup/dlg_macro_table.cpp
 setup/setup-main.glade

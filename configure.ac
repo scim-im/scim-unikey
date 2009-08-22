@@ -1,7 +1,7 @@
 # Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.59)
 
-AC_INIT(scim-unikey, 0.3.0.r57, mr.lequoctuan@gmail.com)
+AC_INIT(scim-unikey, 0.3.0.r62, mr.lequoctuan@gmail.com)
 
 cflags_set=${CFLAGS+set}
 cppflags_set=${CPPFLAGS+set}
@@ -108,6 +108,7 @@ AC_SUBST(SCIM_ICONDIR)
 AC_SUBST(SCIM_MODULEDIR)
 
 AC_CONFIG_FILES([Makefile
+  scim-unikey.spec
   src/Makefile
   ukengine/Makefile
   icon/Makefile

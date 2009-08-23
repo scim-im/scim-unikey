@@ -33,12 +33,10 @@ scim_setup_unikey_SOURCES = \
 
 scim_setup_unikey_CXXFLAGS = \
     @SCIM_GTKUTILS_CFLAGS@ \
-    @SCIM_CFLAGS@ \
     @GIO_CFLAGS@
 
 scim_setup_unikey_LDFLAGS = \
     @SCIM_GTKUTILS_LIBS@ \
-    @SCIM_LIBS@ \
     @GIO_LIBS@ \
     $(top_builddir)/ukengine/libunikey-scim.la
 

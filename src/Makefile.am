@@ -17,7 +17,7 @@ noinst_HEADERS = \
     utils.h
 
 unikey_la_LIBADD        = $(top_builddir)/ukengine/libunikey-scim.la
-unikey_la_CFLAGS        = @SCIM_CFLAGS@ @SCIM_DEBUG_FLAGS@
-unikey_la_CXXFLAGS      = @SCIM_CFLAGS@ @SCIM_DEBUG_FLAGS@
+unikey_la_CFLAGS        = @SCIM_CFLAGS@
+unikey_la_CXXFLAGS      = @SCIM_CFLAGS@
 unikey_la_LDFLAGS       = -avoid-version -rpath $(imenginedir) -module @LIBTOOL_EXPORT_OPTIONS@ @SCIM_LIBS@
 

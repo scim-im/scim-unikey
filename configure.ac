@@ -1,7 +1,7 @@
 # Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.59)
 
-AC_INIT(scim-unikey, 0.3.0.r62, mr.lequoctuan@gmail.com)
+AC_INIT(scim-unikey, 0.3.0.r63, mr.lequoctuan@gmail.com)
 
 cflags_set=${CFLAGS+set}
 cppflags_set=${CPPFLAGS+set}
@@ -48,6 +48,7 @@ AC_SUBST(SCIM_VERSION)
 PKG_CHECK_MODULES(SCIM_GTKUTILS,[scim-gtkutils >= $SCIM_VERSION],
 		  		[SCIM_HAS_GTKUTILS=yes],
 				[SCIM_HAS_GTKUTILS=no])
+AC_SUBST(SCIM_GTKUTILS)
 
 if test "$SCIM_HAS_GTKUTILS" = "yes"; then
   SCIM_BUILD_SETUP=1
@@ -70,23 +71,6 @@ AC_SUBST(ac_aux_dir)
 LIBTOOL_EXPORT_OPTIONS='-export-symbols-regex "^[[^_]].*"'
 AC_SUBST(LIBTOOL_EXPORT_OPTIONS)
 
-# Extra args.
-AC_ARG_ENABLE(debug,
-	      [  --enable-debug     Turn on debugging],
-	      [case "${enableval}" in
-	       yes) debug=yes ;;
-	       no)  debug=no ;;
-	       *) AC_MSG_ERROR(bad value ${enableval} for --enable-debug) ;;
-       	      esac],[debug=no])
-
-if test "x$debug" = "xyes"; then
-  test "$cflags_set" = set || CFLAGS="$CFLAGS -g"
-  test "$cppflags_set" = set || CPPFLAGS="$CXXFLAGS -g"
-  SCIM_DEBUG_FLAGS="-DENABLE_DEBUG=1"
-else
-  SCIM_DEBUG_FLAGS=""
-fi
-AC_SUBST(SCIM_DEBUG_FLAGS)
 
 newprefix=`$PKG_CONFIG --variable=prefix scim`
 if test "x$newprefix" != "x"; then
@@ -99,16 +83,16 @@ SCIM_MODULEDIR=`$PKG_CONFIG --variable=moduledir scim`
 if test "x$SCIM_ICONDIR" = "x"; then
   SCIM_ICONDIR=${datadir}/scim/icons
 fi
+AC_SUBST(SCIM_ICONDIR)
 
 if test "x$SCIM_MODULEDIR" = "x"; then
   SCIM_MODULEDIR=${libdir}/scim-1.0
 fi
-
-AC_SUBST(SCIM_ICONDIR)
 AC_SUBST(SCIM_MODULEDIR)
 
 AC_CONFIG_FILES([Makefile
   scim-unikey.spec
+  debian/changelog
   src/Makefile
   ukengine/Makefile
   icon/Makefile

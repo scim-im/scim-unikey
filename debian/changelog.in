@@ -1,6 +1,6 @@
-scim-unikey (@PACKAGE_VERSION@-1) unstable; urgency=low
+scim-unikey (@PACKAGE_VERSION@-1~user) unstable; urgency=low
 
-  * Release 0.3
+  * Release @PACKAGE_VERSION@
 
- -- Le Quoc Tuan <mr.lequoctuan@gmail.com>  Sat, 20 Jun 2009 22:55:00 +0700
+ -- Your name <yourmail@example.com>  Wed, 26 Aug 2009 18:00:00 +0700
 

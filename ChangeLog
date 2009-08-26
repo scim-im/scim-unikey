@@ -1,9 +1,13 @@
-2009-06-xx  Le Quoc Tuan <mr.lequoctuan@gmail.com>
+2009-08-26  Le Quoc Tuan <mr.lequoctuan@gmail.com>
 
-	* Release 0.3
-	* Change how to choose input method and output charset
-	* fix preedit mode with macro
-	* fix shift+space with capslock
+	* Release 0.3.1
+	- Change how to choose input method and output charset
+	- fix preedit mode with macro
+	- fix shift+space with capslock
+	- new setup GUI
+	- remove switch typing mode keys
+	- add more charset and input method
+	- fix more
 
 2009-05-14  Le Quoc Tuan <mr.lequoctuan@gmail.com>
 

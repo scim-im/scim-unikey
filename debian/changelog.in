@@ -1,6 +1,0 @@
-scim-unikey (@PACKAGE_VERSION@-1~user) unstable; urgency=low
-
-  * Release @PACKAGE_VERSION@
-
- -- Your name <yourmail@example.com>  Wed, 26 Aug 2009 18:00:00 +0700
-

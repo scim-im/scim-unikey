@@ -92,7 +92,6 @@ AC_SUBST(SCIM_MODULEDIR)
 
 AC_CONFIG_FILES([Makefile
   scim-unikey.spec
-  debian/changelog
   src/Makefile
   ukengine/Makefile
   icon/Makefile

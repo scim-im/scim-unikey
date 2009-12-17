@@ -1,7 +1,7 @@
 Name:       @PACKAGE_NAME@
 Version:    @PACKAGE_VERSION@
 Release:    1%{?dist}
-Summary:    Vietnamese Input Method Engine for SCIM using Unikey IME
+Summary:    Vietnamese Input Method Engine for SCIM using Unikey Engine
 Vendor:     Ubuntu-VN
 License:    LGPL 2
 Group:      Localization
@@ -9,9 +9,9 @@ URL:        http://code.google.com/p/scim-unikey/
 Source:     http://scim-unikey.googlecode.com/files/%{name}-%{version}.tar.gz
 
 %description
-SCIM (Smart Common Input Method) is an input method (IM) platform.
-scim-unikey is a IME for scim. Use for type Vietnamese
-Support via forum at: http://forum.ubuntu-vn.com/viewforum.php?f=85
+Smart Common Input Method (SCIM) is an input method (IM) platform.
+Scim-Unikey is a Vietnamese input method for SCIM
+Use Unikey engine to process keyevent
 
 BuildRequires: scim-devel >= 1.4.7
 Requires: scim

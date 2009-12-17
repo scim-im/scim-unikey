@@ -1,4 +1,4 @@
-2009-08-26  Le Quoc Tuan <mr.lequoctuan@gmail.com>
+2009-08-26  Lê Quốc Tuấn <mr.lequoctuan@gmail.com>
 
 	* Release 0.3.1
 	- Change how to choose input method and output charset
@@ -9,15 +9,15 @@
 	- add more charset and input method
 	- fix more
 
-2009-05-14  Le Quoc Tuan <mr.lequoctuan@gmail.com>
+2009-05-14  Lê Quốc Tuấn <mr.lequoctuan@gmail.com>
 
 	* Release 0.2.0
 
-2009-05-12  Le Quoc Tuan <mr.lequoctuan@gmail.com>
+2009-05-12  Lê Quốc Tuấn <mr.lequoctuan@gmail.com>
 
 	* Add switch typing mode keys (and setup that key)
 
-2009-05-07  Le Quoc Tuan <mr.lequoctuan@gmail.com>
+2009-05-07  Lê Quốc Tuấn <mr.lequoctuan@gmail.com>
 
 	* Many bugs fixed
 
@@ -28,7 +28,7 @@
 	(EXTRA_DIST): Add config.rpath, m4/ChangeLog.
 	* configure.ac (AC_CONFIG_FILES): Add po/Makefile.in.
 
-2009-03-13  Le Quoc Tuan <mr.lequoctuan@gmail.com>
+2009-03-13  Lê Quốc Tuấn <mr.lequoctuan@gmail.com>
 
 	* Release 0.2.0~20090313
 	* Improve non-preedit type

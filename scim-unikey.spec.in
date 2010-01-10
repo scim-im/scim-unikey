@@ -14,6 +14,8 @@ Scim-Unikey is a Vietnamese input method for SCIM
 Use Unikey engine to process keyevent
 
 BuildRequires: scim-devel >= 1.4.7
+BuildRequires: glib2-devel >= 2.16
+BuildRequires: gtk2-devel >= 2.12
 Requires: scim
 
 %prep

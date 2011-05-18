@@ -4,7 +4,7 @@
    Copyright (C) 2008-2009 Ubuntu-VN <http://www.ubuntu-vn.org>
    Author: Le Quoc Tuan <mr.lequoctuan@gmail.com>
    Home: http://scim-unikey.googlecode.com
-   License: GNU LESSER GENERAL PUBLIC LICENSE v2.1
+   License: GNU GENERAL PUBLIC LICENSE v2
 */
 
 #include <scim.h>

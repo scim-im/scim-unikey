@@ -24,7 +24,11 @@ int main(int argc, char** argv)
     GtkWidget* main_dlg = unikey_main_setup_dialog_new(); // create main dlg
     gtk_window_set_title(GTK_WINDOW(main_dlg), "Scim-Unikey setup v" PACKAGE_VERSION);
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+    g_signal_connect(G_OBJECT(main_dlg), "destroy", gtk_main_quit, NULL); // connect with signal
+#else
     gtk_signal_connect(GTK_OBJECT(main_dlg), "destroy", gtk_main_quit, NULL); // connect with signal
+#endif
 
     UnikeyMainSetupOptions opt; // create option
     set_default_config(&opt); // create default option

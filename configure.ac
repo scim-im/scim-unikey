@@ -1,7 +1,7 @@
 # Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.59)
 
-AC_INIT(scim-unikey, 0.3.1, mr.lequoctuan@gmail.com)
+AC_INIT(scim-unikey, 0.3.2, mr.lequoctuan@gmail.com)
 
 cflags_set=${CFLAGS+set}
 cppflags_set=${CPPFLAGS+set}

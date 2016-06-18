@@ -3,7 +3,7 @@ Version:    @PACKAGE_VERSION@
 Release:    1%{?dist}
 Summary:    Vietnamese Input Method Engine for SCIM using Unikey Engine
 Vendor:     Ubuntu-VN
-License:    GPL 2
+License:    LGPL 2
 Group:      Localization
 URL:        http://code.google.com/p/scim-unikey/
 Source:     http://scim-unikey.googlecode.com/files/%{name}-%{version}.tar.gz
@@ -14,8 +14,6 @@ Scim-Unikey is a Vietnamese input method for SCIM
 Use Unikey engine to process keyevent
 
 BuildRequires: scim-devel >= 1.4.7
-BuildRequires: glib2-devel >= 2.16
-BuildRequires: gtk2-devel >= 2.12
 Requires: scim
 
 %prep
